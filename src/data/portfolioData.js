@@ -22,9 +22,6 @@ export const artistProfile = {
     "Vector Artwork & Image Editing"
   ],
   tools: [
-    { name: "Adobe Illustrator", level: "Intermediate", icon: "Palette" },
-    { name: "Adobe Photoshop", level: "Intermediate", icon: "Image" },
-    { name: "Adobe InDesign", level: "Proficient", icon: "BookOpen" },
     { name: "Figma", level: "Proficient", icon: "Layout" },
     { name: "Canva Pro", level: "Advanced", icon: "Sparkles" },
     { name: "Design Fundamentals", level: "Self-Taught", icon: "Target" }

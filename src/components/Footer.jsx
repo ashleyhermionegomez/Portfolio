@@ -1,5 +1,5 @@
 import React from 'react';
-import { Palette, ArrowUp, Linkedin, Dribbble, Instagram, Heart } from 'lucide-react';
+import { Palette, ArrowUp } from 'lucide-react';
 import { artistProfile } from '../data/portfolioData';
 
 export default function Footer({ onOpenContact, onOpenResume }) {
@@ -83,24 +83,15 @@ export default function Footer({ onOpenContact, onOpenResume }) {
             </ul>
           </div>
 
-          {/* Col 4: Social & Back to Top */}
+          {/* Col 4: Back to Top */}
           <div className="space-y-3">
             <h4 className="text-xs font-mono uppercase tracking-wider text-white font-bold">
-              Connect & Back To Top
+              Back To Top
             </h4>
             <div className="flex items-center gap-2">
-              <a href="https://linkedin.com" target="_blank" rel="noreferrer" className="p-2.5 rounded-xl bg-slate-900 text-slate-300 hover:text-purple-300 hover:bg-slate-800 border border-slate-800">
-                <Linkedin className="w-4 h-4" />
-              </a>
-              <a href="https://dribbble.com" target="_blank" rel="noreferrer" className="p-2.5 rounded-xl bg-slate-900 text-slate-300 hover:text-purple-300 hover:bg-slate-800 border border-slate-800">
-                <Dribbble className="w-4 h-4" />
-              </a>
-              <a href="https://instagram.com" target="_blank" rel="noreferrer" className="p-2.5 rounded-xl bg-slate-900 text-slate-300 hover:text-purple-300 hover:bg-slate-800 border border-slate-800">
-                <Instagram className="w-4 h-4" />
-              </a>
               <button
                 onClick={scrollToTop}
-                className="p-2.5 rounded-xl bg-purple-500/10 text-purple-300 hover:bg-purple-600 hover:text-white border border-purple-500/20 transition-all ml-auto"
+                className="p-2.5 rounded-xl bg-purple-500/10 text-purple-300 hover:bg-purple-600 hover:text-white border border-purple-500/20 transition-all"
                 title="Scroll to top"
               >
                 <ArrowUp className="w-4 h-4" />
@@ -111,11 +102,8 @@ export default function Footer({ onOpenContact, onOpenResume }) {
         </div>
 
         {/* Copyright */}
-        <div className="pt-8 border-t border-slate-800/80 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-slate-500">
+        <div className="pt-8 border-t border-slate-800/80 text-center text-xs text-slate-500">
           <p>© {new Date().getFullYear()} Self-Taught Graphic Artist Portfolio. All rights reserved.</p>
-          <p className="flex items-center gap-1">
-            Created with <Heart className="w-3.5 h-3.5 text-purple-400 fill-purple-400" /> & Passion for Graphic Design
-          </p>
         </div>
 
       </div>

@@ -63,7 +63,7 @@ export default function ResumeModal({ isOpen, onClose }) {
                   {artistProfile.title}
                 </p>
                 <div className="flex flex-wrap items-center gap-4 text-xs text-slate-400 pt-1">
-                  <span className="flex items-center gap-1"><Mail className="w-3 h-3 text-purple-400" /> {artistProfile.contact.email}</span>
+                  <span className="flex items-center gap-1"><Mail className="w-3 h-3 text-purple-400" /> hermionegomez49@gmail.com</span>
                   <span className="flex items-center gap-1"><Globe className="w-3 h-3 text-purple-400" /> Open to Remote & On-site</span>
                 </div>
               </div>
@@ -121,12 +121,13 @@ export default function ResumeModal({ isOpen, onClose }) {
               </h3>
               <div className="space-y-2 text-xs">
                 <div>
-                  <p className="font-bold text-white">Bachelor's Degree (Recent Graduate)</p>
-                  <p className="text-slate-400">Graduated recently • Strong foundation in creative problem solving</p>
+                  <p className="font-bold text-white">Polytechnic University of the Philippines – Taguig Campus</p>
+                  <p className="text-slate-400">Diploma in Information Technology | 2023 – 2026</p>
+                  <p className="text-slate-400">Graduated October 1, 2026</p>
                 </div>
                 <div>
                   <p className="font-bold text-white">Self-Taught Graphic Design Journey</p>
-                  <p className="text-slate-400">Independent study of Adobe Illustrator, Photoshop, InDesign & Figma</p>
+                  <p className="text-slate-400">Independent study of design tools and visual communication</p>
                 </div>
               </div>
             </div>

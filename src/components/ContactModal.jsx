@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { X, Send, Mail, CheckCircle, Sparkles } from 'lucide-react';
+import { X, Send, CheckCircle } from 'lucide-react';
 import confetti from 'canvas-confetti';
 import { artistProfile } from '../data/portfolioData';
 
@@ -18,6 +18,21 @@ export default function ContactModal({ isOpen, onClose }) {
 
   const handleSubmit = (e) => {
     e.preventDefault();
+    
+    // Create mailto link with form data
+    const subject = encodeURIComponent(`Portfolio Inquiry: ${formData.service}`);
+    const body = encodeURIComponent(
+      `Name: ${formData.name}\n` +
+      `Email: ${formData.email}\n` +
+      `Project Type: ${formData.service}\n` +
+      `Timeline: ${formData.timeline}\n\n` +
+      `Message:\n${formData.message}`
+    );
+    const mailtoLink = `mailto:hermionegomez49@gmail.com?subject=${subject}&body=${body}`;
+    
+    // Open default email client
+    window.location.href = mailtoLink;
+    
     setSubmitted(true);
     
     // Trigger festive celebratory confetti with purple colors
@@ -45,18 +60,13 @@ export default function ContactModal({ isOpen, onClose }) {
         
         {/* Header */}
         <div className="flex items-center justify-between border-b border-slate-800 pb-4">
-          <div className="flex items-center gap-2.5">
-            <div className="p-2 rounded-xl bg-purple-500/10 text-purple-400 border border-purple-500/20">
-              <Sparkles className="w-5 h-5" />
-            </div>
-            <div>
-              <h2 className="font-heading font-extrabold text-xl text-white">
-                Get in Touch
-              </h2>
-              <p className="text-xs text-slate-400">
-                Send a project message or opportunity inquiry.
-              </p>
-            </div>
+          <div>
+            <h2 className="font-heading font-extrabold text-xl text-white">
+              Get in Touch
+            </h2>
+            <p className="text-xs text-slate-400">
+              Send a project message or opportunity inquiry.
+            </p>
           </div>
 
           <button

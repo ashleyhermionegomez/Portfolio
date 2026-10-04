@@ -94,7 +94,7 @@ export default function SkillsSection() {
                 Design Tool Suite
               </h3>
               <p className="text-xs text-slate-400 mt-1">
-                Applications used for creating visual assets, vector graphics, and layouts.
+                Applications used for creating visual assets, vector graphics, and layouts. I can adapt to any tools you may want me to use.
               </p>
             </div>
             <span className="px-3 py-1 rounded-lg bg-purple-500/10 text-purple-300 text-xs font-mono border border-purple-500/20 w-fit">
@@ -102,18 +102,14 @@ export default function SkillsSection() {
             </span>
           </div>
 
-          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-4">
+          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4">
             {artistProfile.tools.map((tool, idx) => {
-              const ToolIcon = iconMap[tool.icon] || Palette;
               return (
                 <div
                   key={idx}
                   className="p-4 rounded-xl bg-slate-950 border border-slate-800 flex flex-col items-center text-center space-y-2 hover:border-purple-500/40 transition-all"
                 >
-                  <div className="p-2.5 rounded-lg bg-slate-900 text-purple-400">
-                    <ToolIcon className="w-5 h-5" />
-                  </div>
-                  <span className="font-bold text-xs text-white block truncate w-full">
+                  <span className="font-bold text-sm text-white block truncate w-full">
                     {tool.name}
                   </span>
                   <span className="px-2 py-0.5 rounded bg-purple-500/10 text-[10px] font-mono text-purple-300">
