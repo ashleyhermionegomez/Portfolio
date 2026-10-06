@@ -1,12 +1,8 @@
 import React from 'react';
-import { Palette, ArrowUp } from 'lucide-react';
+import { Palette } from 'lucide-react';
 import { artistProfile } from '../data/portfolioData';
 
 export default function Footer({ onOpenContact, onOpenResume }) {
-  const scrollToTop = () => {
-    window.scrollTo({ top: 0, behavior: 'smooth' });
-  };
-
   return (
     <footer id="contact" className="bg-slate-950 border-t border-purple-950/40 text-slate-400 py-16 relative">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
@@ -83,20 +79,23 @@ export default function Footer({ onOpenContact, onOpenResume }) {
             </ul>
           </div>
 
-          {/* Col 4: Back to Top */}
+          {/* Col 4: Quick Actions */}
           <div className="space-y-3">
             <h4 className="text-xs font-mono uppercase tracking-wider text-white font-bold">
-              Back To Top
+              More Actions
             </h4>
-            <div className="flex items-center gap-2">
-              <button
-                onClick={scrollToTop}
-                className="p-2.5 rounded-xl bg-purple-500/10 text-purple-300 hover:bg-purple-600 hover:text-white border border-purple-500/20 transition-all"
-                title="Scroll to top"
-              >
-                <ArrowUp className="w-4 h-4" />
-              </button>
-            </div>
+            <ul className="space-y-2 text-xs">
+              <li>
+                <button onClick={onOpenContact} className="hover:text-purple-300 transition-colors text-left">
+                  Send Message
+                </button>
+              </li>
+              <li>
+                <button onClick={onOpenResume} className="hover:text-purple-300 transition-colors text-left">
+                  View Resume (CV)
+                </button>
+              </li>
+            </ul>
           </div>
 
         </div>

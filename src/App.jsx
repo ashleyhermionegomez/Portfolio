@@ -8,6 +8,7 @@ import Footer from './components/Footer';
 import ProjectModal from './components/ProjectModal';
 import ContactModal from './components/ContactModal';
 import ResumeModal from './components/ResumeModal';
+import BackToTop from './components/BackToTop';
 
 export default function App() {
   const [selectedProject, setSelectedProject] = useState(null);
@@ -16,8 +17,35 @@ export default function App() {
 
   const scrollToPortfolio = () => {
     const el = document.getElementById('portfolio');
-    if (el) el.scrollIntoView({ behavior: 'smooth' });
+    if (el) {
+      el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
   };
+
+  // Smooth scroll for all anchor links
+  React.useEffect(() => {
+    const handleAnchorClick = (e) => {
+      const target = e.target.closest('a[href^="#"]');
+      if (target) {
+        e.preventDefault();
+        const id = target.getAttribute('href').slice(1);
+        const element = document.getElementById(id);
+        if (element) {
+          const offset = 80; // Account for fixed header
+          const elementPosition = element.getBoundingClientRect().top;
+          const offsetPosition = elementPosition + window.pageYOffset - offset;
+          
+          window.scrollTo({
+            top: offsetPosition,
+            behavior: 'smooth'
+          });
+        }
+      }
+    };
+
+    document.addEventListener('click', handleAnchorClick);
+    return () => document.removeEventListener('click', handleAnchorClick);
+  }, []);
 
   return (
     <div className="min-h-screen bg-slate-950 text-slate-100 selection:bg-amber-400 selection:text-slate-950 font-sans">
@@ -71,6 +99,9 @@ export default function App() {
         isOpen={isResumeOpen}
         onClose={() => setIsResumeOpen(false)}
       />
+
+      {/* Back to Top Button */}
+      <BackToTop />
 
     </div>
   );

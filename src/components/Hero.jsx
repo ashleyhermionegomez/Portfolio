@@ -1,5 +1,5 @@
 import React from 'react';
-import { ArrowRight, Sparkles, CheckCircle2, Download, Award, GraduationCap, HeartHandshake } from 'lucide-react';
+import { ArrowRight, Sparkles, CheckCircle2, Download, Award, GraduationCap, HeartHandshake, ChevronDown, MousePointer2 } from 'lucide-react';
 import { artistProfile } from '../data/portfolioData';
 
 export default function Hero({ onOpenContact, onOpenResume, scrollToPortfolio }) {
@@ -129,6 +129,20 @@ export default function Hero({ onOpenContact, onOpenResume, scrollToPortfolio })
           </div>
 
         </div>
+      </div>
+
+      {/* Scroll Down Indicator */}
+      <div className="absolute bottom-8 left-1/2 -translate-x-1/2 z-20 animate-bounce">
+        <button
+          onClick={scrollToPortfolio}
+          className="flex flex-col items-center gap-2 text-purple-300 hover:text-purple-400 transition-colors group"
+          aria-label="Scroll down to portfolio"
+        >
+          <span className="text-xs font-mono uppercase tracking-wider">Scroll Down</span>
+          <div className="w-10 h-10 rounded-full bg-purple-500/10 border border-purple-500/30 flex items-center justify-center group-hover:bg-purple-500/20 transition-all">
+            <ChevronDown className="w-5 h-5" />
+          </div>
+        </button>
       </div>
     </section>
   );
