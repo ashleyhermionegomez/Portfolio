@@ -43,7 +43,9 @@ export const categories = [
   { id: "social", label: "Social Media & Marketing" },
   { id: "beauty", label: "Beauty & Editorial" },
   { id: "presentation", label: "Decks & Layouts" },
-  { id: "infographic", label: "Data & Infographics" }
+  { id: "infographic", label: "Data & Infographics" },
+  { id: "food-beverage", label: "Food & Beverage" },
+  { id: "tech", label: "Tech & Product" }
 ];
 
 export const portfolioProjects = [
@@ -418,6 +420,152 @@ export const portfolioProjects = [
       "20-piece comprehensive promotional ad visual collection",
       "Multi-format designs: square posts, stories, banners",
       "Bold typography, vibrant palettes, and strong CTA design"
+    ]
+  },
+  {
+    id: "novasuite-roadmap",
+    title: "NovaSuite 2027 Product Roadmap Carousel",
+    category: "presentation",
+    categoryLabel: "Product Roadmap & Carousel",
+    client: "NovaSuite Product Launch",
+    year: "2027",
+    role: "Visual Designer & Slide Creator",
+    tools: ["Figma", "Canva Pro", "Data Layout"],
+    featured: true,
+    thumbnail: "/Portfolio/NovaSuite 2027 product roadmap carousel/1.png",
+    images: [
+      "/Portfolio/NovaSuite 2027 product roadmap carousel/1.png",
+      "/Portfolio/NovaSuite 2027 product roadmap carousel/2.png",
+      "/Portfolio/NovaSuite 2027 product roadmap carousel/3.png",
+      "/Portfolio/NovaSuite 2027 product roadmap carousel/4.png",
+      "/Portfolio/NovaSuite 2027 product roadmap carousel/5.png"
+    ],
+    shortDesc: "Strategic product roadmap carousel showcasing 2027 feature releases and timeline visualization for NovaSuite platform.",
+    fullDesc: "A comprehensive 5-slide product roadmap carousel designed to communicate NovaSuite's 2027 release strategy. Features clean timeline visualization, feature highlights, and milestone tracking with professional tech branding.",
+    highlights: [
+      "5-slide strategic roadmap carousel layout",
+      "Clear timeline visualization with quarterly milestones",
+      "Modern tech-forward design aesthetic"
+    ]
+  },
+  {
+    id: "two-step-verification",
+    title: "2-Step Verification Tech Tip",
+    category: "tech",
+    categoryLabel: "Tech Education & Tips",
+    client: "Tech Education Content",
+    year: "2026",
+    role: "Graphic Designer & Content Creator",
+    tools: ["Figma", "Canva Pro", "Icon Design"],
+    featured: false,
+    thumbnail: "/Portfolio/2-Step Verification Tech Tip.png",
+    images: ["/Portfolio/2-Step Verification Tech Tip.png"],
+    shortDesc: "Educational tech tip graphic explaining two-step verification security with clear visual instructions.",
+    fullDesc: "An informative tech security graphic designed to educate users about two-step verification. Features clean icon design, step-by-step visual guidance, and accessible information hierarchy.",
+    highlights: [
+      "Clear educational content structure",
+      "Security-focused visual design",
+      "User-friendly instructional layout"
+    ]
+  },
+  {
+    id: "cozy-latte-ad",
+    title: "Cozy Morning Latte Instagram Ad",
+    category: "food-beverage",
+    categoryLabel: "Food & Beverage Marketing",
+    client: "Coffee Shop Marketing",
+    year: "2026",
+    role: "Social Media Designer",
+    tools: ["Canva Pro", "Photo Styling"],
+    featured: true,
+    thumbnail: "/Portfolio/Cozy morning latte Instagram ad.png",
+    images: ["/Portfolio/Cozy morning latte Instagram ad.png"],
+    shortDesc: "Warm and inviting Instagram ad for morning latte promotion with cozy lifestyle aesthetic.",
+    fullDesc: "An Instagram advertisement designed to promote morning coffee offerings. Features warm color tones, lifestyle photography styling, and inviting copy that creates an emotional connection with coffee lovers.",
+    highlights: [
+      "Warm, inviting visual aesthetic",
+      "Lifestyle-focused product photography",
+      "Instagram-optimized square format"
+    ]
+  },
+  {
+    id: "iced-coffee-summer",
+    title: "Iced Coffee Summer Menu Ad",
+    category: "food-beverage",
+    categoryLabel: "Seasonal Menu Marketing",
+    client: "Café Summer Campaign",
+    year: "2026",
+    role: "Social Media & Ad Designer",
+    tools: ["Canva Pro", "Typography"],
+    featured: false,
+    thumbnail: "/Portfolio/Iced coffee summer menu ad.png",
+    images: ["/Portfolio/Iced coffee summer menu ad.png"],
+    shortDesc: "Refreshing summer-themed Instagram ad showcasing iced coffee menu with vibrant seasonal appeal.",
+    fullDesc: "A seasonal menu advertisement designed for summer promotion. Features bright, refreshing visuals, bold typography, and product-focused composition perfect for driving summer beverage sales.",
+    highlights: [
+      "Seasonal summer color palette",
+      "Product-focused composition",
+      "Eye-catching promotional design"
+    ]
+  },
+  {
+    id: "lumiere-serum-post",
+    title: "Lumière Skin Co. Serum Instagram Post",
+    category: "beauty",
+    categoryLabel: "Skincare Product Marketing",
+    client: "Lumière Skin Co.",
+    year: "2026",
+    role: "Product Marketing Designer",
+    tools: ["Canva Pro", "Product Photography"],
+    featured: false,
+    thumbnail: "/Portfolio/Lumière Skin Co. serum Instagram post.png",
+    images: ["/Portfolio/Lumière Skin Co. serum Instagram post.png"],
+    shortDesc: "Elegant Instagram post showcasing luxury serum product with premium skincare branding aesthetic.",
+    fullDesc: "A premium skincare product post designed for Instagram engagement. Features elegant product photography, luxury brand aesthetic, and clean minimal design that highlights the serum's sophisticated positioning.",
+    highlights: [
+      "Premium luxury skincare aesthetic",
+      "Clean product-focused layout",
+      "Instagram engagement-optimized design"
+    ]
+  },
+  {
+    id: "noir-cacao-ad",
+    title: "Noir Cacao Co. Instagram Ad",
+    category: "food-beverage",
+    categoryLabel: "Artisan Food Marketing",
+    client: "Noir Cacao Co.",
+    year: "2026",
+    role: "Brand & Ad Designer",
+    tools: ["Canva Pro", "Brand Styling"],
+    featured: true,
+    thumbnail: "/Portfolio/Noir Cacao Co. Instagram ad.png",
+    images: ["/Portfolio/Noir Cacao Co. Instagram ad.png"],
+    shortDesc: "Premium dark chocolate brand Instagram advertisement with sophisticated artisan aesthetic.",
+    fullDesc: "An Instagram ad designed for artisan chocolate brand Noir Cacao Co. Features dark, sophisticated color palette, premium product presentation, and elegant typography that communicates luxury chocolate positioning.",
+    highlights: [
+      "Dark, sophisticated brand aesthetic",
+      "Premium artisan product positioning",
+      "Elegant typography and layout"
+    ]
+  },
+  {
+    id: "tasknest-ad",
+    title: "TaskNest Instagram Ad",
+    category: "tech",
+    categoryLabel: "Productivity App Marketing",
+    client: "TaskNest App Launch",
+    year: "2026",
+    role: "App Marketing Designer",
+    tools: ["Figma", "Canva Pro", "UI Design"],
+    featured: false,
+    thumbnail: "/Portfolio/TaskNest Instagram ad.png",
+    images: ["/Portfolio/TaskNest Instagram ad.png"],
+    shortDesc: "Modern productivity app Instagram advertisement showcasing task management features with clean interface design.",
+    fullDesc: "An Instagram ad campaign designed for TaskNest productivity app. Features modern UI mockups, clear feature highlights, and tech-forward design aesthetic that appeals to productivity-focused users.",
+    highlights: [
+      "Clean modern app interface showcase",
+      "Feature-focused marketing approach",
+      "Tech-forward design aesthetic"
     ]
   }
 ];
