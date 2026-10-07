@@ -45,7 +45,9 @@ export const categories = [
   { id: "presentation", label: "Decks & Layouts" },
   { id: "infographic", label: "Data & Infographics" },
   { id: "food-beverage", label: "Food & Beverage" },
-  { id: "tech", label: "Tech & Product" }
+  { id: "tech", label: "Tech & Product" },
+  { id: "print", label: "Print & Flyers" },
+  { id: "web-banners", label: "Web Banners" }
 ];
 
 export const portfolioProjects = [
@@ -566,6 +568,133 @@ export const portfolioProjects = [
       "Clean modern app interface showcase",
       "Feature-focused marketing approach",
       "Tech-forward design aesthetic"
+    ]
+  },
+  {
+    id: "brew-bloom-cafe",
+    title: "Brew & Bloom Cafe Social Media Cover Banner",
+    category: "food-beverage",
+    categoryLabel: "Cafe Branding & Social Media",
+    client: "Brew & Bloom Cafe",
+    year: "2026",
+    role: "Social Media Designer",
+    tools: ["Canva Pro", "Brand Design"],
+    featured: true,
+    thumbnail: "/Portfolio/Brew & Bloom Cafe social media cover banner/1.png",
+    images: [
+      "/Portfolio/Brew & Bloom Cafe social media cover banner/1.png",
+      "/Portfolio/Brew & Bloom Cafe social media cover banner/2.png"
+    ],
+    shortDesc: "Eye-catching social media cover banners for cafe branding with warm, welcoming aesthetic and floral design elements.",
+    fullDesc: "A social media cover banner set designed for Brew & Bloom Cafe. Features warm earthy tones, botanical illustrations, and inviting coffee imagery that creates a cozy, welcoming brand presence across social platforms.",
+    highlights: [
+      "2-piece social media cover banner collection",
+      "Warm botanical-inspired design aesthetic",
+      "Cohesive cafe branding elements"
+    ]
+  },
+  {
+    id: "street-food-fest",
+    title: "Street Food Fest 2027 Event Flyer",
+    category: "print",
+    categoryLabel: "Event Promotion & Flyers",
+    client: "Street Food Festival",
+    year: "2027",
+    role: "Event Flyer Designer",
+    tools: ["Canva Pro", "Typography Design"],
+    featured: true,
+    thumbnail: "/Portfolio/Street Food Fest 2027 flyer/1.png",
+    images: [
+      "/Portfolio/Street Food Fest 2027 flyer/1.png",
+      "/Portfolio/Street Food Fest 2027 flyer/2.png",
+      "/Portfolio/Street Food Fest 2027 flyer/3.png"
+    ],
+    shortDesc: "Vibrant event promotion flyer for street food festival with bold typography and appetizing food photography.",
+    fullDesc: "A multi-format event promotion flyer series designed for Street Food Fest 2027. Features bold, energetic typography, mouth-watering food imagery, and clear event information hierarchy perfect for both print and digital distribution.",
+    highlights: [
+      "3-format event flyer designs",
+      "Bold, attention-grabbing typography",
+      "Food photography integration"
+    ]
+  },
+  {
+    id: "corporate-brochure",
+    title: "A4 Bi-Fold Corporate Company Profile Brochure",
+    category: "print",
+    categoryLabel: "Corporate Print Design",
+    client: "Corporate Brochure Project",
+    year: "2026",
+    role: "Print Layout Designer",
+    tools: ["Canva Pro", "Layout Design"],
+    featured: false,
+    thumbnail: "/Portfolio/A4 bi-fold corporate company profile brochure.png",
+    images: ["/Portfolio/A4 bi-fold corporate company profile brochure.png"],
+    shortDesc: "Professional A4 bi-fold corporate brochure with clean layout and structured information hierarchy.",
+    fullDesc: "A corporate company profile brochure designed in A4 bi-fold format. Features professional layout design, clean typography, structured sections for company information, and business-appropriate color scheme.",
+    highlights: [
+      "A4 bi-fold brochure layout",
+      "Professional corporate aesthetic",
+      "Structured information hierarchy"
+    ]
+  },
+  {
+    id: "travel-brochure",
+    title: "A4 Landscape Travel Agency Tri-Fold Brochure",
+    category: "print",
+    categoryLabel: "Travel & Tourism Print",
+    client: "Travel Agency Marketing",
+    year: "2026",
+    role: "Travel Brochure Designer",
+    tools: ["Canva Pro", "Photo Layout"],
+    featured: true,
+    thumbnail: "/Portfolio/A4 landscape travel agency tri-fold brochure.png",
+    images: ["/Portfolio/A4 landscape travel agency tri-fold brochure.png"],
+    shortDesc: "Inspiring travel agency tri-fold brochure with destination photography and engaging layout design.",
+    fullDesc: "An A4 landscape tri-fold brochure designed for a travel agency. Features stunning destination photography, organized tour packages information, and an inviting layout that inspires wanderlust and travel bookings.",
+    highlights: [
+      "A4 landscape tri-fold format",
+      "Destination-focused photography",
+      "Engaging travel layout design"
+    ]
+  },
+  {
+    id: "cleaning-service-flyer",
+    title: "ShinyHome Co. Cleaning Service Flyer",
+    category: "print",
+    categoryLabel: "Service Marketing Flyer",
+    client: "ShinyHome Co.",
+    year: "2026",
+    role: "Flyer Designer",
+    tools: ["Canva Pro", "Service Marketing"],
+    featured: false,
+    thumbnail: "/Portfolio/ShinyHome Co. cleaning service flyer.png",
+    images: ["/Portfolio/ShinyHome Co. cleaning service flyer.png"],
+    shortDesc: "Professional cleaning service promotional flyer with clear service offerings and contact information.",
+    fullDesc: "A promotional flyer designed for ShinyHome Co. cleaning services. Features clean, fresh design aesthetic, clear service descriptions, pricing information, and prominent contact details for easy customer engagement.",
+    highlights: [
+      "Clean, fresh design aesthetic",
+      "Service-focused layout",
+      "Clear call-to-action elements"
+    ]
+  },
+  {
+    id: "voltmart-banner",
+    title: "VoltMart Mega Tech Sale Website Hero Banner",
+    category: "web-banners",
+    categoryLabel: "E-commerce Web Banners",
+    client: "VoltMart Electronics",
+    year: "2026",
+    role: "Web Banner Designer",
+    tools: ["Figma", "Canva Pro"],
+    featured: true,
+    thumbnail: "/Portfolio/VoltMart mega tech sale website hero banner.png",
+    images: ["/Portfolio/VoltMart mega tech sale website hero banner.png"],
+    shortDesc: "High-impact website hero banner for tech sale promotion with bold discount messaging and product imagery.",
+    fullDesc: "A website hero banner designed for VoltMart's mega tech sale campaign. Features bold promotional typography, eye-catching discount messaging, product imagery, and strong call-to-action designed to drive conversions.",
+    highlights: [
+      "High-impact promotional design",
+      "Bold discount messaging",
+      "Conversion-focused layout"
     ]
   }
 ];
