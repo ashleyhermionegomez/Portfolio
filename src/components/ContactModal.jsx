@@ -128,6 +128,7 @@ export default function ContactModal({ isOpen, onClose }) {
                 <label className="text-xs font-mono text-slate-300">Your Name *</label>
                 <input
                   type="text"
+                  name="name"
                   required
                   placeholder="e.g. Alex Rivera"
                   value={formData.name}
@@ -140,6 +141,7 @@ export default function ContactModal({ isOpen, onClose }) {
                 <label className="text-xs font-mono text-slate-300">Email Address *</label>
                 <input
                   type="email"
+                  name="email"
                   required
                   placeholder="e.g. alex@example.com"
                   value={formData.email}
@@ -153,6 +155,7 @@ export default function ContactModal({ isOpen, onClose }) {
               <div className="space-y-1.5 text-left">
                 <label className="text-xs font-mono text-slate-300">Project Type</label>
                 <select
+                  name="service"
                   value={formData.service}
                   onChange={(e) => setFormData({ ...formData, service: e.target.value })}
                   className="w-full px-4 py-2.5 rounded-xl bg-slate-950 border border-slate-800 text-white text-sm focus:outline-none focus:border-purple-400 transition-colors"
@@ -169,6 +172,7 @@ export default function ContactModal({ isOpen, onClose }) {
               <div className="space-y-1.5 text-left">
                 <label className="text-xs font-mono text-slate-300">Timeline / Scope</label>
                 <select
+                  name="timeline"
                   value={formData.timeline}
                   onChange={(e) => setFormData({ ...formData, timeline: e.target.value })}
                   className="w-full px-4 py-2.5 rounded-xl bg-slate-950 border border-slate-800 text-white text-sm focus:outline-none focus:border-purple-400 transition-colors"
@@ -184,6 +188,7 @@ export default function ContactModal({ isOpen, onClose }) {
             <div className="space-y-1.5 text-left">
               <label className="text-xs font-mono text-slate-300">Your Message *</label>
               <textarea
+                name="message"
                 required
                 rows={3}
                 placeholder="Write your message or project details here..."
