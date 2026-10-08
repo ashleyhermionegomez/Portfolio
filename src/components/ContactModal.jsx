@@ -16,32 +16,41 @@ export default function ContactModal({ isOpen, onClose }) {
 
   if (!isOpen) return null;
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
     
-    // Create mailto link with form data
-    const subject = encodeURIComponent(`Portfolio Inquiry: ${formData.service}`);
-    const body = encodeURIComponent(
-      `Name: ${formData.name}\n` +
-      `Email: ${formData.email}\n` +
-      `Project Type: ${formData.service}\n` +
-      `Timeline: ${formData.timeline}\n\n` +
-      `Message:\n${formData.message}`
-    );
-    const mailtoLink = `mailto:hermionegomez49@gmail.com?subject=${subject}&body=${body}`;
-    
-    // Open default email client
-    window.location.href = mailtoLink;
-    
-    setSubmitted(true);
-    
-    // Trigger festive celebratory confetti with purple colors
-    confetti({
-      particleCount: 100,
-      spread: 70,
-      origin: { y: 0.6 },
-      colors: ['#a855f7', '#c084fc', '#818cf8', '#38bdf8']
-    });
+    try {
+      // Submit form data to Netlify Forms
+      const response = await fetch('/', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+        body: new URLSearchParams({
+          'form-name': 'contact',
+          'name': formData.name,
+          'email': formData.email,
+          'service': formData.service,
+          'timeline': formData.timeline,
+          'message': formData.message
+        }).toString()
+      });
+
+      if (response.ok) {
+        setSubmitted(true);
+        
+        // Trigger festive celebratory confetti with purple colors
+        confetti({
+          particleCount: 100,
+          spread: 70,
+          origin: { y: 0.6 },
+          colors: ['#a855f7', '#c084fc', '#818cf8', '#38bdf8']
+        });
+      } else {
+        alert('Failed to send message. Please try again or email directly at hermionegomez49@gmail.com');
+      }
+    } catch (error) {
+      console.error('Form submission error:', error);
+      alert('Failed to send message. Please try again or email directly at hermionegomez49@gmail.com');
+    }
   };
 
   const handleReset = () => {
@@ -98,7 +107,21 @@ export default function ContactModal({ isOpen, onClose }) {
             </button>
           </div>
         ) : (
-          <form onSubmit={handleSubmit} className="space-y-4">
+          <form 
+            name="contact" 
+            method="POST" 
+            data-netlify="true"
+            data-netlify-honeypot="bot-field"
+            onSubmit={handleSubmit} 
+            className="space-y-4"
+          >
+            {/* Netlify Forms hidden fields */}
+            <input type="hidden" name="form-name" value="contact" />
+            <p className="hidden">
+              <label>
+                Don't fill this out if you're human: <input name="bot-field" />
+              </label>
+            </p>
             
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
               <div className="space-y-1.5 text-left">
