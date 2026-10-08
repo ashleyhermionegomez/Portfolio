@@ -580,17 +580,16 @@ export const portfolioProjects = [
     role: "Social Media Designer",
     tools: ["Canva Pro", "Brand Design"],
     featured: true,
-    thumbnail: "/Portfolio/Brew & Bloom Cafe social media cover banner/1.png",
+    thumbnail: "/Portfolio/Brew & Bloom Cafe social media cover banner/2.png",
     images: [
-      "/Portfolio/Brew & Bloom Cafe social media cover banner/1.png",
       "/Portfolio/Brew & Bloom Cafe social media cover banner/2.png"
     ],
-    shortDesc: "Eye-catching social media cover banners for cafe branding with warm, welcoming aesthetic and floral design elements.",
-    fullDesc: "A social media cover banner set designed for Brew & Bloom Cafe. Features warm earthy tones, botanical illustrations, and inviting coffee imagery that creates a cozy, welcoming brand presence across social platforms.",
+    shortDesc: "Eye-catching social media cover banner for cafe branding with warm, welcoming aesthetic and floral design elements.",
+    fullDesc: "A social media cover banner designed for Brew & Bloom Cafe. Features warm earthy tones, botanical illustrations, and inviting coffee imagery that creates a cozy, welcoming brand presence across social platforms.",
     highlights: [
-      "2-piece social media cover banner collection",
       "Warm botanical-inspired design aesthetic",
-      "Cohesive cafe branding elements"
+      "Cohesive cafe branding elements",
+      "Social media optimized layout"
     ]
   },
   {
@@ -603,18 +602,16 @@ export const portfolioProjects = [
     role: "Event Flyer Designer",
     tools: ["Canva Pro", "Typography Design"],
     featured: true,
-    thumbnail: "/Portfolio/Street Food Fest 2027 flyer/1.png",
+    thumbnail: "/Portfolio/Street Food Fest 2027 flyer/2.png",
     images: [
-      "/Portfolio/Street Food Fest 2027 flyer/1.png",
-      "/Portfolio/Street Food Fest 2027 flyer/2.png",
-      "/Portfolio/Street Food Fest 2027 flyer/3.png"
+      "/Portfolio/Street Food Fest 2027 flyer/2.png"
     ],
     shortDesc: "Vibrant event promotion flyer for street food festival with bold typography and appetizing food photography.",
-    fullDesc: "A multi-format event promotion flyer series designed for Street Food Fest 2027. Features bold, energetic typography, mouth-watering food imagery, and clear event information hierarchy perfect for both print and digital distribution.",
+    fullDesc: "An event promotion flyer designed for Street Food Fest 2027. Features bold, energetic typography, mouth-watering food imagery, and clear event information hierarchy perfect for both print and digital distribution.",
     highlights: [
-      "3-format event flyer designs",
       "Bold, attention-grabbing typography",
-      "Food photography integration"
+      "Food photography integration",
+      "Print and digital ready format"
     ]
   },
   {
