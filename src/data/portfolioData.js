@@ -8,7 +8,7 @@ export const artistProfile = {
   stats: [
     { label: "Design Journey", value: "Self-Taught" },
     { label: "Education Status", value: "Fresh Graduate" },
-    { label: "Curated Showcase", value: "14 Works" },
+    { label: "Curated Showcase", value: "30 Works" },
     { label: "Mindset", value: "Always Learning" }
   ],
   skills: [
@@ -692,6 +692,133 @@ export const portfolioProjects = [
       "High-impact promotional design",
       "Bold discount messaging",
       "Conversion-focused layout"
+    ]
+  },
+  {
+    id: "internal-strategy-deck",
+    title: "Internal Strategy and Project Update Deck",
+    category: "presentation",
+    categoryLabel: "Internal Communications & Strategy",
+    client: "Corporate Strategy Project",
+    year: "2026",
+    role: "Presentation Designer",
+    tools: ["Figma", "PowerPoint", "Data Visualization"],
+    featured: true,
+    thumbnail: "/Portfolio/Internal strategy and project update deck/1.png",
+    images: [
+      "/Portfolio/Internal strategy and project update deck/1.png",
+      "/Portfolio/Internal strategy and project update deck/2.png",
+      "/Portfolio/Internal strategy and project update deck/3.png",
+      "/Portfolio/Internal strategy and project update deck/4.png",
+      "/Portfolio/Internal strategy and project update deck/5.png",
+      "/Portfolio/Internal strategy and project update deck/6.png"
+    ],
+    shortDesc: "Comprehensive internal presentation deck for strategic planning and project status updates with data visualizations.",
+    fullDesc: "An internal strategy and project update presentation deck designed for executive communication. Features clean data visualizations, progress tracking charts, strategic roadmaps, and professional slide layouts that effectively communicate complex project information to stakeholders.",
+    highlights: [
+      "6-slide executive presentation format",
+      "Data-driven strategic visualizations",
+      "Professional internal comms design"
+    ]
+  },
+  {
+    id: "bakery-menu-post",
+    title: "Bakery Menu Highlight Post",
+    category: "food-beverage",
+    categoryLabel: "Bakery & Cafe Marketing",
+    client: "Bakery Marketing Project",
+    year: "2026",
+    role: "Social Media Designer",
+    tools: ["Canva Pro", "Food Styling"],
+    featured: false,
+    thumbnail: "/Portfolio/Bakery menu highlight post.png",
+    images: ["/Portfolio/Bakery menu highlight post.png"],
+    shortDesc: "Appetizing bakery menu social media post highlighting featured items with warm, inviting design.",
+    fullDesc: "A social media post designed to showcase bakery menu highlights. Features mouth-watering food photography, warm color palette, menu item descriptions, and inviting typography that makes baked goods irresistible to customers.",
+    highlights: [
+      "Food-focused photography styling",
+      "Warm, appetizing color palette",
+      "Menu highlight layout"
+    ]
+  },
+  {
+    id: "cafe-poll-story",
+    title: "Cafe Poll and Q&A Instagram Story",
+    category: "food-beverage",
+    categoryLabel: "Cafe Social Engagement",
+    client: "Cafe Social Media Project",
+    year: "2026",
+    role: "Social Media Content Designer",
+    tools: ["Canva Pro", "Instagram Stories"],
+    featured: false,
+    thumbnail: "/Portfolio/Cafe poll and Q&A Instagram Story.png",
+    images: ["/Portfolio/Cafe poll and Q&A Instagram Story.png"],
+    shortDesc: "Interactive Instagram Story template for cafe engagement with poll and Q&A features.",
+    fullDesc: "An interactive Instagram Story design created for cafe customer engagement. Features fun poll questions, Q&A prompts, and branded design elements that encourage audience participation and build community around the cafe brand.",
+    highlights: [
+      "Interactive Story engagement design",
+      "Customer participation focus",
+      "Cafe brand personality elements"
+    ]
+  },
+  {
+    id: "remote-work-infographic",
+    title: "Remote Work Statistics Infographic",
+    category: "infographic",
+    categoryLabel: "Workplace & Data Visualization",
+    client: "Remote Work Research Project",
+    year: "2026",
+    role: "Infographic Designer",
+    tools: ["Illustrator", "Data Visualization", "Icon Design"],
+    featured: true,
+    thumbnail: "/Portfolio/Remote work statistics infographic.png",
+    images: ["/Portfolio/Remote work statistics infographic.png"],
+    shortDesc: "Comprehensive infographic visualizing remote work statistics and trends with modern data design.",
+    fullDesc: "A data-driven infographic showcasing remote work statistics and workplace trends. Features custom data visualizations, icon illustrations, comparative charts, and clear information hierarchy that makes complex workplace data accessible and engaging.",
+    highlights: [
+      "Custom data visualization design",
+      "Workplace trend analysis layout",
+      "Clear statistical storytelling"
+    ]
+  },
+  {
+    id: "serum-moisturizer-infographic",
+    title: "Serum vs. Moisturizer Infographic",
+    category: "beauty",
+    categoryLabel: "Beauty Education & Infographics",
+    client: "Skincare Education Project",
+    year: "2026",
+    role: "Beauty Infographic Designer",
+    tools: ["Canva Pro", "Illustrator", "Educational Design"],
+    featured: false,
+    thumbnail: "/Portfolio/Serum vs. Moisturizer infographic.png",
+    images: ["/Portfolio/Serum vs. Moisturizer infographic.png"],
+    shortDesc: "Educational beauty infographic comparing serum and moisturizer with clear visual explanations.",
+    fullDesc: "An educational infographic designed to help consumers understand the difference between serums and moisturizers. Features side-by-side comparison layout, skincare product illustrations, benefit breakdowns, and clean design that makes beauty education accessible.",
+    highlights: [
+      "Educational comparison layout",
+      "Beauty product visualization",
+      "Consumer-friendly design approach"
+    ]
+  },
+  {
+    id: "vitatrack-app-ad",
+    title: "VitaTrack Mobile App Download Ad",
+    category: "tech",
+    categoryLabel: "Health & Fitness App Marketing",
+    client: "VitaTrack Health App",
+    year: "2026",
+    role: "App Marketing Designer",
+    tools: ["Figma", "Canva Pro", "Mobile UI"],
+    featured: true,
+    thumbnail: "/Portfolio/VitaTrack mobile app download ad.png",
+    images: ["/Portfolio/VitaTrack mobile app download ad.png"],
+    shortDesc: "Mobile app download advertisement for health tracking app with engaging UI showcase and clear call-to-action.",
+    fullDesc: "A mobile app download advertisement designed for VitaTrack health and fitness application. Features clean app interface mockups, key feature highlights, app store badges, and compelling copy that drives app installations and user acquisition.",
+    highlights: [
+      "App interface showcase design",
+      "Clear download call-to-action",
+      "Health & fitness app positioning"
     ]
   }
 ];
