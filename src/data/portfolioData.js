@@ -8,7 +8,7 @@ export const artistProfile = {
   stats: [
     { label: "Design Journey", value: "Self-Taught" },
     { label: "Education Status", value: "Fresh Graduate" },
-    { label: "Curated Showcase", value: "30 Works" },
+    { label: "Curated Showcase", value: "37 Works" },
     { label: "Mindset", value: "Always Learning" }
   ],
   skills: [
@@ -47,7 +47,9 @@ export const categories = [
   { id: "food-beverage", label: "Food & Beverage" },
   { id: "tech", label: "Tech & Product" },
   { id: "print", label: "Print & Flyers" },
-  { id: "web-banners", label: "Web Banners" }
+  { id: "web-banners", label: "Web Banners" },
+  { id: "corporate-food", label: "Corporate Food Industry" },
+  { id: "social-cause", label: "Social Cause & Awareness" }
 ];
 
 export const portfolioProjects = [
@@ -819,6 +821,217 @@ export const portfolioProjects = [
       "App interface showcase design",
       "Clear download call-to-action",
       "Health & fitness app positioning"
+    ]
+  },
+  {
+    id: "orlando-corporate-profile",
+    title: "Orlando Prestige Corporate Company Profile Presentation",
+    category: "corporate-food",
+    categoryLabel: "Corporate Profile Presentation",
+    client: "Orlando Prestige Inc.",
+    year: "2026",
+    role: "Corporate Presentation Designer",
+    tools: ["PowerPoint", "Canva Pro", "Corporate Design"],
+    featured: true,
+    thumbnail: "/Portfolio/Orlando Prestige Corporate Company Profile Presentation/1.png",
+    images: [
+      "/Portfolio/Orlando Prestige Corporate Company Profile Presentation/1.png",
+      "/Portfolio/Orlando Prestige Corporate Company Profile Presentation/2.png",
+      "/Portfolio/Orlando Prestige Corporate Company Profile Presentation/3.png",
+      "/Portfolio/Orlando Prestige Corporate Company Profile Presentation/4.png",
+      "/Portfolio/Orlando Prestige Corporate Company Profile Presentation/5.png",
+      "/Portfolio/Orlando Prestige Corporate Company Profile Presentation/6.png",
+      "/Portfolio/Orlando Prestige Corporate Company Profile Presentation/7.png",
+      "/Portfolio/Orlando Prestige Corporate Company Profile Presentation/8.png",
+      "/Portfolio/Orlando Prestige Corporate Company Profile Presentation/9.png",
+      "/Portfolio/Orlando Prestige Corporate Company Profile Presentation/10.png"
+    ],
+    shortDesc: "Professional 10-slide corporate company profile presentation for Italian food import and distribution company.",
+    fullDesc: "A comprehensive corporate presentation showcasing Orlando Prestige Inc.'s company profile, mission, values, and business operations in the Italian food products industry. Features professional layout design, company history, product categories, distribution network, and corporate achievements with elegant Italian-inspired design elements.",
+    highlights: [
+      "10-slide executive company profile deck",
+      "Professional corporate identity presentation",
+      "Italian food industry focus with premium aesthetic"
+    ]
+  },
+  {
+    id: "orlando-distribution-agreement",
+    title: "Exclusive Distribution Agreement Presentation",
+    category: "corporate-food",
+    categoryLabel: "Corporate Business Agreement Deck",
+    client: "Orlando Prestige Inc. & CFTRI",
+    year: "2026",
+    role: "Corporate Presentation Designer",
+    tools: ["PowerPoint", "Figma", "Business Documentation"],
+    featured: true,
+    thumbnail: "/Portfolio/Exclusive Distribution Agreement Orlando Prestige Inc. & CFTRI (Corporate Business Presentation)/1.png",
+    images: [
+      "/Portfolio/Exclusive Distribution Agreement Orlando Prestige Inc. & CFTRI (Corporate Business Presentation)/1.png",
+      "/Portfolio/Exclusive Distribution Agreement Orlando Prestige Inc. & CFTRI (Corporate Business Presentation)/2.png",
+      "/Portfolio/Exclusive Distribution Agreement Orlando Prestige Inc. & CFTRI (Corporate Business Presentation)/3.png",
+      "/Portfolio/Exclusive Distribution Agreement Orlando Prestige Inc. & CFTRI (Corporate Business Presentation)/4.png",
+      "/Portfolio/Exclusive Distribution Agreement Orlando Prestige Inc. & CFTRI (Corporate Business Presentation)/5.png",
+      "/Portfolio/Exclusive Distribution Agreement Orlando Prestige Inc. & CFTRI (Corporate Business Presentation)/6.png",
+      "/Portfolio/Exclusive Distribution Agreement Orlando Prestige Inc. & CFTRI (Corporate Business Presentation)/7.png",
+      "/Portfolio/Exclusive Distribution Agreement Orlando Prestige Inc. & CFTRI (Corporate Business Presentation)/8.png",
+      "/Portfolio/Exclusive Distribution Agreement Orlando Prestige Inc. & CFTRI (Corporate Business Presentation)/9.png",
+      "/Portfolio/Exclusive Distribution Agreement Orlando Prestige Inc. & CFTRI (Corporate Business Presentation)/10.png",
+      "/Portfolio/Exclusive Distribution Agreement Orlando Prestige Inc. & CFTRI (Corporate Business Presentation)/11.png",
+      "/Portfolio/Exclusive Distribution Agreement Orlando Prestige Inc. & CFTRI (Corporate Business Presentation)/12.png"
+    ],
+    shortDesc: "12-slide corporate business presentation documenting exclusive distribution partnership agreement between Orlando Prestige and CFTRI.",
+    fullDesc: "A formal corporate business presentation designed to communicate the exclusive distribution agreement between Orlando Prestige Inc. and CFTRI. Features professional contract overview, partnership terms, distribution territories, product lines covered, business projections, and strategic partnership benefits with corporate-appropriate design and data visualization.",
+    highlights: [
+      "12-slide comprehensive agreement presentation",
+      "Professional business partnership documentation",
+      "Strategic distribution deal visualization"
+    ]
+  },
+  {
+    id: "orlando-product-portfolio",
+    title: "Orlando Prestige Products Portfolio & Market Overview",
+    category: "corporate-food",
+    categoryLabel: "Corporate Sales & Marketing Deck",
+    client: "Orlando Prestige Products",
+    year: "2026",
+    role: "Sales Deck & Product Marketing Designer",
+    tools: ["PowerPoint", "Data Visualization", "Sales Design"],
+    featured: true,
+    thumbnail: "/Portfolio/Orlando Prestige Products Product Portfolio & Competitive Market Overview (Corporate sales presentation  product marketing deck)/1.png",
+    images: [
+      "/Portfolio/Orlando Prestige Products Product Portfolio & Competitive Market Overview (Corporate sales presentation  product marketing deck)/1.png",
+      "/Portfolio/Orlando Prestige Products Product Portfolio & Competitive Market Overview (Corporate sales presentation  product marketing deck)/2.png",
+      "/Portfolio/Orlando Prestige Products Product Portfolio & Competitive Market Overview (Corporate sales presentation  product marketing deck)/3.png",
+      "/Portfolio/Orlando Prestige Products Product Portfolio & Competitive Market Overview (Corporate sales presentation  product marketing deck)/4.png",
+      "/Portfolio/Orlando Prestige Products Product Portfolio & Competitive Market Overview (Corporate sales presentation  product marketing deck)/5.png",
+      "/Portfolio/Orlando Prestige Products Product Portfolio & Competitive Market Overview (Corporate sales presentation  product marketing deck)/6.png",
+      "/Portfolio/Orlando Prestige Products Product Portfolio & Competitive Market Overview (Corporate sales presentation  product marketing deck)/7.png",
+      "/Portfolio/Orlando Prestige Products Product Portfolio & Competitive Market Overview (Corporate sales presentation  product marketing deck)/8.png",
+      "/Portfolio/Orlando Prestige Products Product Portfolio & Competitive Market Overview (Corporate sales presentation  product marketing deck)/9.png",
+      "/Portfolio/Orlando Prestige Products Product Portfolio & Competitive Market Overview (Corporate sales presentation  product marketing deck)/10.png",
+      "/Portfolio/Orlando Prestige Products Product Portfolio & Competitive Market Overview (Corporate sales presentation  product marketing deck)/11.png",
+      "/Portfolio/Orlando Prestige Products Product Portfolio & Competitive Market Overview (Corporate sales presentation  product marketing deck)/12.png",
+      "/Portfolio/Orlando Prestige Products Product Portfolio & Competitive Market Overview (Corporate sales presentation  product marketing deck)/13.png",
+      "/Portfolio/Orlando Prestige Products Product Portfolio & Competitive Market Overview (Corporate sales presentation  product marketing deck)/14.png",
+      "/Portfolio/Orlando Prestige Products Product Portfolio & Competitive Market Overview (Corporate sales presentation  product marketing deck)/15.png",
+      "/Portfolio/Orlando Prestige Products Product Portfolio & Competitive Market Overview (Corporate sales presentation  product marketing deck)/16.png",
+      "/Portfolio/Orlando Prestige Products Product Portfolio & Competitive Market Overview (Corporate sales presentation  product marketing deck)/17.png"
+    ],
+    shortDesc: "Comprehensive 17-slide corporate sales presentation showcasing product portfolio and competitive market analysis for Italian food products.",
+    fullDesc: "An extensive corporate sales and marketing deck presenting Orlando Prestige's complete product portfolio alongside competitive market landscape analysis. Features detailed product category breakdowns, market positioning charts, competitive advantage matrices, sales performance data, target market segments, and strategic growth opportunities with professional B2B sales presentation design.",
+    highlights: [
+      "17-slide comprehensive sales & marketing deck",
+      "Complete product portfolio showcase",
+      "Competitive market analysis and positioning"
+    ]
+  },
+  {
+    id: "orlando-food-brochure",
+    title: "Orlando Prestige Italian Food Products Brochure",
+    category: "corporate-food",
+    categoryLabel: "Product Line Brochures",
+    client: "Orlando Prestige Inc.",
+    year: "2026",
+    role: "Product Brochure Designer",
+    tools: ["InDesign", "Illustrator", "Print Design"],
+    featured: true,
+    thumbnail: "/Portfolio/Orlando Prestige Italian Food Products Brochure/Page 1 cover_ Granaria Pasta Brochure.png",
+    images: [
+      "/Portfolio/Orlando Prestige Italian Food Products Brochure/Page 1 cover_ Granaria Pasta Brochure.png",
+      "/Portfolio/Orlando Prestige Italian Food Products Brochure/Page 2 inside_ Granaria Pasta Range Brochure.png",
+      "/Portfolio/Orlando Prestige Italian Food Products Brochure/Page 1 cover_ Olive Oil Products Brochure.png",
+      "/Portfolio/Orlando Prestige Italian Food Products Brochure/Page 2 inside_ Olive Oil Brochure.png",
+      "/Portfolio/Orlando Prestige Italian Food Products Brochure/Page 1 cover_ Orlando Truffle Products Brochure.png",
+      "/Portfolio/Orlando Prestige Italian Food Products Brochure/Page 2 inside_ Orlando Truffle Product Range Brochure.png",
+      "/Portfolio/Orlando Prestige Italian Food Products Brochure/Page 1 cover_ Pallante Pasta Brochure.png",
+      "/Portfolio/Orlando Prestige Italian Food Products Brochure/Page 2 inside_ Pallante Pasta Brochure.png",
+      "/Portfolio/Orlando Prestige Italian Food Products Brochure/Page 1 cover_ Tomato Products Brochure.png",
+      "/Portfolio/Orlando Prestige Italian Food Products Brochure/Page 2 inside_ Davia Tomato Brochure.png",
+      "/Portfolio/Orlando Prestige Italian Food Products Brochure/Page 1 cover_ Vinegar Products Brochure.png",
+      "/Portfolio/Orlando Prestige Italian Food Products Brochure/Page 2 inside_ Balsamic Vinegar & Glaze Brochure.png"
+    ],
+    shortDesc: "Premium Italian food product brochure collection featuring pasta, olive oil, truffle, tomato, and vinegar product lines with elegant bi-fold layouts.",
+    fullDesc: "A complete collection of product line brochures for Orlando Prestige's Italian food imports. Each product category (Granaria Pasta, Pallante Pasta, Olive Oil, Truffle Products, Tomato Products, and Vinegar Products) features a beautifully designed bi-fold brochure with cover and interior spread showcasing product details, specifications, packaging, and Italian heritage with premium food photography and elegant typography.",
+    highlights: [
+      "6 distinct product line brochures (12 pages total)",
+      "Premium Italian food product presentation",
+      "Bi-fold print layout with product photography"
+    ]
+  },
+  {
+    id: "orlando-product-catalogue",
+    title: "Orlando Prestige Product Catalogue",
+    category: "corporate-food",
+    categoryLabel: "Multi-Page Product Catalogue",
+    client: "Orlando Prestige Inc.",
+    year: "2026",
+    role: "Catalogue Designer & Layout Artist",
+    tools: ["InDesign", "Photoshop", "Catalogue Design"],
+    featured: true,
+    thumbnail: "/Portfolio/Orlando Prestige Product Catalogue (Multi-page product catalogue brochure)/1.png",
+    images: [
+      "/Portfolio/Orlando Prestige Product Catalogue (Multi-page product catalogue brochure)/1.png",
+      "/Portfolio/Orlando Prestige Product Catalogue (Multi-page product catalogue brochure)/2.png",
+      "/Portfolio/Orlando Prestige Product Catalogue (Multi-page product catalogue brochure)/3.png",
+      "/Portfolio/Orlando Prestige Product Catalogue (Multi-page product catalogue brochure)/4.png",
+      "/Portfolio/Orlando Prestige Product Catalogue (Multi-page product catalogue brochure)/5.png",
+      "/Portfolio/Orlando Prestige Product Catalogue (Multi-page product catalogue brochure)/6.png",
+      "/Portfolio/Orlando Prestige Product Catalogue (Multi-page product catalogue brochure)/7.png",
+      "/Portfolio/Orlando Prestige Product Catalogue (Multi-page product catalogue brochure)/8.png",
+      "/Portfolio/Orlando Prestige Product Catalogue (Multi-page product catalogue brochure)/9.png",
+      "/Portfolio/Orlando Prestige Product Catalogue (Multi-page product catalogue brochure)/10.png",
+      "/Portfolio/Orlando Prestige Product Catalogue (Multi-page product catalogue brochure)/11.png",
+      "/Portfolio/Orlando Prestige Product Catalogue (Multi-page product catalogue brochure)/12.png",
+      "/Portfolio/Orlando Prestige Product Catalogue (Multi-page product catalogue brochure)/13.png",
+      "/Portfolio/Orlando Prestige Product Catalogue (Multi-page product catalogue brochure)/16.png",
+      "/Portfolio/Orlando Prestige Product Catalogue (Multi-page product catalogue brochure)/19.png"
+    ],
+    shortDesc: "Comprehensive multi-page product catalogue showcasing Orlando Prestige's complete Italian food product range with detailed specifications.",
+    fullDesc: "An extensive product catalogue designed for Orlando Prestige's B2B and wholesale customers. Features systematic product organization, detailed product specifications, high-quality food photography, pricing information, ordering details, and product codes across multiple categories including pasta, olive oil, vinegars, truffle products, and tomato products. Professional catalogue layout optimized for print and digital distribution.",
+    highlights: [
+      "Multi-page comprehensive product catalogue",
+      "Complete product range with specifications",
+      "Professional B2B catalogue design"
+    ]
+  },
+  {
+    id: "mental-health-poster",
+    title: "Mental Health Awareness and Crisis Support Poster",
+    category: "social-cause",
+    categoryLabel: "Health Awareness & Social Impact",
+    client: "Mental Health Awareness Campaign",
+    year: "2026",
+    role: "Social Cause Designer",
+    tools: ["Canva Pro", "Poster Design", "Awareness Graphics"],
+    featured: true,
+    thumbnail: "/Portfolio/Mental Health Awareness and Crisis Support Poster.png",
+    images: ["/Portfolio/Mental Health Awareness and Crisis Support Poster.png"],
+    shortDesc: "Impactful mental health awareness poster featuring crisis support resources and compassionate messaging.",
+    fullDesc: "A thoughtfully designed awareness poster focused on mental health support and crisis intervention. Features compassionate messaging, clear crisis hotline information, supportive visual elements, and accessible design that communicates hope and resources for those in need. Designed for community centers, schools, healthcare facilities, and public awareness campaigns.",
+    highlights: [
+      "Compassionate mental health messaging",
+      "Clear crisis support resource information",
+      "Community-focused awareness design"
+    ]
+  },
+  {
+    id: "earth-day-poster",
+    title: "Misty Forest Earth Day Poster",
+    category: "social-cause",
+    categoryLabel: "Environmental Awareness",
+    client: "Earth Day Campaign",
+    year: "2026",
+    role: "Environmental Campaign Designer",
+    tools: ["Canva Pro", "Nature Photography", "Poster Design"],
+    featured: false,
+    thumbnail: "/Portfolio/Misty forest Earth Day poster.png",
+    images: ["/Portfolio/Misty forest Earth Day poster.png"],
+    shortDesc: "Serene Earth Day awareness poster featuring misty forest imagery and environmental conservation message.",
+    fullDesc: "An Earth Day campaign poster designed to inspire environmental awareness and conservation action. Features atmospheric forest photography with misty ambiance, environmental messaging, and nature-focused design elements that evoke connection to the natural world and encourage sustainable practices.",
+    highlights: [
+      "Atmospheric nature photography",
+      "Environmental conservation messaging",
+      "Earth Day campaign aesthetic"
     ]
   }
 ];
