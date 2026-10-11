@@ -1,6 +1,6 @@
 import React, { useState, useMemo } from 'react';
 import { categories, portfolioProjects } from '../data/portfolioData';
-import { ExternalLink, Layers, Sparkles, Eye, ChevronLeft, ChevronRight } from 'lucide-react';
+import { ExternalLink, Layers, Sparkles, Eye, ChevronLeft, ChevronRight, GraduationCap } from 'lucide-react';
 
 export default function PortfolioGrid({ onSelectProject }) {
   const [activeCategory, setActiveCategory] = useState('all');
@@ -124,12 +124,20 @@ export default function PortfolioGrid({ onSelectProject }) {
                     {project.categoryLabel}
                   </span>
                   
-                  {project.images.length > 1 && (
-                    <span className="px-2.5 py-1 rounded-lg text-[11px] font-mono bg-slate-950/85 text-slate-300 border border-slate-700 backdrop-blur-md flex items-center gap-1.5">
-                      <Layers className="w-3 h-3 text-purple-400" />
-                      {project.images.length} Assets
-                    </span>
-                  )}
+                  <div className="flex items-center gap-1.5">
+                    {project.internship && (
+                      <span className="px-2.5 py-1 rounded-lg text-[11px] font-bold bg-amber-500/20 text-amber-300 border border-amber-500/40 backdrop-blur-md flex items-center gap-1">
+                        <GraduationCap className="w-3 h-3" />
+                        Internship
+                      </span>
+                    )}
+                    {project.images.length > 1 && (
+                      <span className="px-2.5 py-1 rounded-lg text-[11px] font-mono bg-slate-950/85 text-slate-300 border border-slate-700 backdrop-blur-md flex items-center gap-1.5">
+                        <Layers className="w-3 h-3 text-purple-400" />
+                        {project.images.length} Assets
+                      </span>
+                    )}
+                  </div>
                 </div>
               </div>
 
@@ -149,18 +157,26 @@ export default function PortfolioGrid({ onSelectProject }) {
                 </div>
 
                 {/* Card Footer Tools & Action */}
-                <div className="pt-3 border-t border-slate-800/80 flex items-center justify-between text-xs">
-                  <div className="flex flex-wrap gap-1.5">
-                    {project.tools.slice(0, 2).map((tool, tIdx) => (
-                      <span key={tIdx} className="px-2 py-0.5 rounded bg-slate-800/80 text-slate-300 text-[10px]">
-                        {tool}
-                      </span>
-                    ))}
-                  </div>
+                <div className="pt-3 border-t border-slate-800/80 space-y-2">
+                  {project.internship && (
+                    <div className="flex items-center gap-1.5 text-[10px] text-amber-400/80">
+                      <GraduationCap className="w-3 h-3 shrink-0" />
+                      <span>Internship work at <span className="font-semibold">{project.internshipCompany}</span></span>
+                    </div>
+                  )}
+                  <div className="flex items-center justify-between text-xs">
+                    <div className="flex flex-wrap gap-1.5">
+                      {project.tools.slice(0, 2).map((tool, tIdx) => (
+                        <span key={tIdx} className="px-2 py-0.5 rounded bg-slate-800/80 text-slate-300 text-[10px]">
+                          {tool}
+                        </span>
+                      ))}
+                    </div>
 
-                  <span className="text-purple-400 font-semibold flex items-center gap-1 group-hover:translate-x-1 transition-transform">
-                    Inspect <ExternalLink className="w-3.5 h-3.5" />
-                  </span>
+                    <span className="text-purple-400 font-semibold flex items-center gap-1 group-hover:translate-x-1 transition-transform">
+                      Inspect <ExternalLink className="w-3.5 h-3.5" />
+                    </span>
+                  </div>
                 </div>
               </div>
 

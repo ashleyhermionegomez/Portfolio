@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { X, ChevronLeft, ChevronRight, Maximize2, Layers, Calendar, User, CheckCircle, ExternalLink } from 'lucide-react';
+import { X, ChevronLeft, ChevronRight, Maximize2, Layers, Calendar, User, CheckCircle, ExternalLink, GraduationCap } from 'lucide-react';
 import { portfolioProjects } from '../data/portfolioData';
 
 export default function ProjectModal({ project, onClose, onSelectProject }) {
@@ -151,6 +151,19 @@ export default function ProjectModal({ project, onClose, onSelectProject }) {
                   <p className="font-semibold text-white truncate">{project.year} • {project.role.split(' ')[0]}</p>
                 </div>
               </div>
+
+              {/* Internship Attribution Banner */}
+              {project.internship && (
+                <div className="flex items-start gap-3 px-4 py-3 rounded-xl bg-amber-500/10 border border-amber-500/30">
+                  <GraduationCap className="w-4 h-4 text-amber-400 shrink-0 mt-0.5" />
+                  <div className="text-xs leading-relaxed">
+                    <span className="font-bold text-amber-300">Internship Work</span>
+                    <span className="text-amber-400/80"> — This project was created during my internship at </span>
+                    <span className="font-semibold text-amber-300">{project.internshipCompany}</span>
+                    <span className="text-amber-400/80">. All design work shown is my own contribution produced during the internship period.</span>
+                  </div>
+                </div>
+              )}
 
               {/* Design Story */}
               <div className="space-y-2">

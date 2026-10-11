@@ -833,6 +833,8 @@ export const portfolioProjects = [
     role: "Corporate Presentation Designer",
     tools: ["PowerPoint", "Canva Pro", "Corporate Design"],
     featured: true,
+    internship: true,
+    internshipCompany: "Orlando Prestige Inc.",
     thumbnail: "/Portfolio/Orlando Prestige Corporate Company Profile Presentation/1.png",
     images: [
       "/Portfolio/Orlando Prestige Corporate Company Profile Presentation/1.png",
@@ -864,6 +866,8 @@ export const portfolioProjects = [
     role: "Corporate Presentation Designer",
     tools: ["PowerPoint", "Figma", "Business Documentation"],
     featured: true,
+    internship: true,
+    internshipCompany: "Orlando Prestige Inc.",
     thumbnail: "/Portfolio/Exclusive Distribution Agreement Orlando Prestige Inc. & CFTRI (Corporate Business Presentation)/1.png",
     images: [
       "/Portfolio/Exclusive Distribution Agreement Orlando Prestige Inc. & CFTRI (Corporate Business Presentation)/1.png",
@@ -897,6 +901,8 @@ export const portfolioProjects = [
     role: "Sales Deck & Product Marketing Designer",
     tools: ["PowerPoint", "Data Visualization", "Sales Design"],
     featured: true,
+    internship: true,
+    internshipCompany: "Orlando Prestige Inc.",
     thumbnail: "/Portfolio/Orlando Prestige Products Product Portfolio & Competitive Market Overview (Corporate sales presentation  product marketing deck)/1.png",
     images: [
       "/Portfolio/Orlando Prestige Products Product Portfolio & Competitive Market Overview (Corporate sales presentation  product marketing deck)/1.png",
@@ -935,6 +941,8 @@ export const portfolioProjects = [
     role: "Product Brochure Designer",
     tools: ["InDesign", "Illustrator", "Print Design"],
     featured: true,
+    internship: true,
+    internshipCompany: "Orlando Prestige Inc.",
     thumbnail: "/Portfolio/Orlando Prestige Italian Food Products Brochure/Page 1 cover_ Granaria Pasta Brochure.png",
     images: [
       "/Portfolio/Orlando Prestige Italian Food Products Brochure/Page 1 cover_ Granaria Pasta Brochure.png",
@@ -968,6 +976,8 @@ export const portfolioProjects = [
     role: "Catalogue Designer & Layout Artist",
     tools: ["InDesign", "Photoshop", "Catalogue Design"],
     featured: true,
+    internship: true,
+    internshipCompany: "Orlando Prestige Inc.",
     thumbnail: "/Portfolio/Orlando Prestige Product Catalogue (Multi-page product catalogue brochure)/1.png",
     images: [
       "/Portfolio/Orlando Prestige Product Catalogue (Multi-page product catalogue brochure)/1.png",
