@@ -124,20 +124,12 @@ export default function PortfolioGrid({ onSelectProject }) {
                     {project.categoryLabel}
                   </span>
                   
-                  <div className="flex items-center gap-1.5">
-                    {project.internship && (
-                      <span className="px-2.5 py-1 rounded-lg text-[11px] font-bold bg-amber-500/20 text-amber-300 border border-amber-500/40 backdrop-blur-md flex items-center gap-1">
-                        <GraduationCap className="w-3 h-3" />
-                        Internship
-                      </span>
-                    )}
-                    {project.images.length > 1 && (
-                      <span className="px-2.5 py-1 rounded-lg text-[11px] font-mono bg-slate-950/85 text-slate-300 border border-slate-700 backdrop-blur-md flex items-center gap-1.5">
-                        <Layers className="w-3 h-3 text-purple-400" />
-                        {project.images.length} Assets
-                      </span>
-                    )}
-                  </div>
+                  {project.images.length > 1 && (
+                    <span className="px-2.5 py-1 rounded-lg text-[11px] font-mono bg-slate-950/85 text-slate-300 border border-slate-700 backdrop-blur-md flex items-center gap-1.5">
+                      <Layers className="w-3 h-3 text-purple-400" />
+                      {project.images.length} Assets
+                    </span>
+                  )}
                 </div>
               </div>
 
