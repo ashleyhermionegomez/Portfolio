@@ -4,17 +4,17 @@ import confetti from 'canvas-confetti';
 
 // ── Project type options ──────────────────────────────────────────────────────
 const PROJECT_TYPES = [
-  { value: 'Brand Identity & Logo Concept', label: '🎨  Brand Identity & Logo Concept' },
-  { value: 'Social Media Campaign Graphics', label: '📱  Social Media Campaign Graphics' },
-  { value: 'Presentation / Pitch Deck Layout', label: '📊  Presentation / Pitch Deck Layout' },
-  { value: 'PDF & Editorial Design', label: '📄  PDF & Editorial Design' },
-  { value: 'Infographic / Visual Assets', label: '📈  Infographic / Visual Assets' },
-  { value: 'Product Advertisement Design', label: '🛒  Product Advertisement Design' },
-  { value: 'Corporate Brochure / Catalogue', label: '🗂️  Corporate Brochure / Catalogue' },
-  { value: 'Web Banners & Digital Ads', label: '🖥️  Web Banners & Digital Ads' },
-  { value: 'Event Flyer / Poster', label: '🎉  Event Flyer / Poster' },
-  { value: 'Junior Role Inquiry', label: '💼  Junior Role Inquiry' },
-  { value: 'Other / Not listed', label: '✏️  Other / Not listed…' },
+  { value: 'Brand Identity & Logo Concept', label: 'Brand Identity & Logo Concept' },
+  { value: 'Social Media Campaign Graphics', label: 'Social Media Campaign Graphics' },
+  { value: 'Presentation / Pitch Deck Layout', label: 'Presentation / Pitch Deck Layout' },
+  { value: 'PDF & Editorial Design', label: 'PDF & Editorial Design' },
+  { value: 'Infographic / Visual Assets', label: 'Infographic / Visual Assets' },
+  { value: 'Product Advertisement Design', label: 'Product Advertisement Design' },
+  { value: 'Corporate Brochure / Catalogue', label: 'Corporate Brochure / Catalogue' },
+  { value: 'Web Banners & Digital Ads', label: 'Web Banners & Digital Ads' },
+  { value: 'Event Flyer / Poster', label: 'Event Flyer / Poster' },
+  { value: 'Junior Role Inquiry', label: 'Junior Role Inquiry' },
+  { value: 'Other / Not listed', label: 'Other / Not listed' },
 ];
 
 // ── Combobox component ────────────────────────────────────────────────────────
@@ -195,7 +195,7 @@ export default function ContactModal({ isOpen, onClose }) {
           <div className="flex items-start justify-between">
             <div className="space-y-1">
               <h2 className="font-heading font-extrabold text-xl text-white">
-                Get in Touch 👋
+                Get in Touch
               </h2>
               <p className="text-xs text-slate-400 leading-relaxed max-w-sm">
                 Have a project in mind or an opportunity to share? Fill in the details below and I'll get back to you promptly.
