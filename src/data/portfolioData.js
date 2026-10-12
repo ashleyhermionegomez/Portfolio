@@ -8,7 +8,7 @@ export const artistProfile = {
   stats: [
     { label: "Design Journey", value: "Self-Taught" },
     { label: "Education Status", value: "Fresh Graduate" },
-    { label: "Curated Showcase", value: "37 Works" },
+    { label: "Curated Showcase", value: "47 Works" },
     { label: "Mindset", value: "Always Learning" }
   ],
   skills: [
@@ -49,6 +49,7 @@ export const categories = [
   { id: "food-beverage",   label: "Food & Beverage" },
   { id: "social-cause",    label: "Social Cause" },
   { id: "corporate-food",  label: "Orlando Prestige (Internship)" },
+  { id: "pup-taguig",      label: "PUP Taguig (Internship)" },
 ];
 
 export const portfolioProjects = [
@@ -389,11 +390,13 @@ export const portfolioProjects = [
     title: "Product Advertisement & Promotional Social Media Post",
     category: "social",
     categoryLabel: "Product Ads & Promotions",
-    client: "Product Promotions Project",
+    client: "Orlando Prestige Inc.",
     year: "2026",
     role: "Social Media Graphic Artist & Ad Designer",
     tools: ["Photoshop", "Illustrator", "Canva Pro"],
     featured: true,
+    internship: true,
+    internshipCompany: "Orlando Prestige Inc.",
     thumbnail: "/Portfolio/Product Advertisement and Promotional Social Media Post/1.png",
     images: [
       "/Portfolio/Product Advertisement and Promotional Social Media Post/1.png",
@@ -1041,6 +1044,177 @@ export const portfolioProjects = [
       "Atmospheric nature photography",
       "Environmental conservation messaging",
       "Earth Day campaign aesthetic"
+    ]
+  },
+  {
+    id: "early-stage-founder-carousel",
+    title: "Early-Stage Founder Tips Social Media Carousel",
+    category: "social",
+    categoryLabel: "LinkedIn Carousel",
+    client: "Startup & Entrepreneur Content",
+    year: "2026",
+    role: "Social Media Graphic Designer",
+    tools: ["Canva Pro", "Figma", "Content Design"],
+    featured: true,
+    thumbnail: "/Portfolio/Early-Stage Founder Tips Social Media Carousel Design/1.png",
+    images: [
+      "/Portfolio/Early-Stage Founder Tips Social Media Carousel Design/1.png",
+      "/Portfolio/Early-Stage Founder Tips Social Media Carousel Design/2.png",
+      "/Portfolio/Early-Stage Founder Tips Social Media Carousel Design/3.png",
+      "/Portfolio/Early-Stage Founder Tips Social Media Carousel Design/4.png",
+      "/Portfolio/Early-Stage Founder Tips Social Media Carousel Design/5.png"
+    ],
+    shortDesc: "5-slide social media carousel packed with actionable tips for early-stage founders, featuring bold layouts and engaging infographic-style design.",
+    fullDesc: "A visually engaging carousel designed for startup and entrepreneurship audiences. Each slide delivers bite-sized founder tips with clean iconography, bold headers, and a consistent brand system built for high scroll-stop impact on LinkedIn and Instagram.",
+    highlights: [
+      "5-slide educational carousel for entrepreneurs",
+      "Bold typography with icon-driven layout",
+      "LinkedIn and Instagram optimized format"
+    ]
+  },
+  {
+    id: "lumen-ops-infographic",
+    title: "Lumen Ops Process Infographic",
+    category: "infographic",
+    categoryLabel: "Process Infographic",
+    client: "Lumen Ops",
+    year: "2026",
+    role: "Infographic Designer",
+    tools: ["Canva Pro", "Illustrator", "Data Design"],
+    featured: false,
+    thumbnail: "/Portfolio/Lumen Ops process infographic.png",
+    images: ["/Portfolio/Lumen Ops process infographic.png"],
+    shortDesc: "Clean single-page process infographic breaking down operational workflows for Lumen Ops with clear visual hierarchy.",
+    fullDesc: "A process-focused infographic designed to visualize Lumen Ops' operational workflow in a clear, digestible format. Features step-by-step flow design, custom icons, and a structured layout that communicates complex processes at a glance.",
+    highlights: [
+      "Process flow visualization design",
+      "Icon-driven step-by-step layout",
+      "Clean, print-ready infographic format"
+    ]
+  },
+  {
+    id: "bosh-safety-brochure",
+    title: "BOSH Safety Culture and Hazard Recognition Brochure",
+    category: "pup-taguig",
+    categoryLabel: "Training Brochure",
+    client: "PUP Taguig",
+    year: "2026",
+    role: "Graphic Designer (Internship)",
+    tools: ["Canva Pro", "InDesign", "Print Design"],
+    featured: true,
+    internship: true,
+    internshipCompany: "PUP Taguig",
+    thumbnail: "/Portfolio/BOSH Safety Culture and Hazard Recognition Brochure/1.png",
+    images: [
+      "/Portfolio/BOSH Safety Culture and Hazard Recognition Brochure/1.png",
+      "/Portfolio/BOSH Safety Culture and Hazard Recognition Brochure/2.png"
+    ],
+    shortDesc: "Professional bi-fold training brochure on BOSH safety culture and hazard recognition designed for workplace safety awareness.",
+    fullDesc: "A workplace safety training brochure created during internship at PUP Taguig. The brochure covers BOSH (Basic Occupational Safety and Health) principles, safety culture frameworks, and hazard recognition guidelines — designed with clear visuals, structured layout, and accessible typography for training materials distribution.",
+    highlights: [
+      "Bi-fold safety training brochure layout",
+      "Workplace hazard recognition visual guide",
+      "Professional occupational safety design"
+    ]
+  },
+  {
+    id: "basic-welding-brochure",
+    title: "Basic Welding Skills Brochure",
+    category: "pup-taguig",
+    categoryLabel: "Training Brochure",
+    client: "PUP Taguig",
+    year: "2026",
+    role: "Graphic Designer (Internship)",
+    tools: ["Canva Pro", "InDesign", "Print Design"],
+    featured: false,
+    internship: true,
+    internshipCompany: "PUP Taguig",
+    thumbnail: "/Portfolio/Basic Welding Skills Brochure/1.png",
+    images: [
+      "/Portfolio/Basic Welding Skills Brochure/1.png",
+      "/Portfolio/Basic Welding Skills Brochure/2.png"
+    ],
+    shortDesc: "Instructional bi-fold brochure introducing basic welding skills and safety fundamentals for vocational training.",
+    fullDesc: "A vocational training brochure on basic welding skills produced during internship at PUP Taguig. Covers fundamental welding techniques, tool introduction, and safety precautions in a clear, beginner-friendly layout designed for TVET training materials.",
+    highlights: [
+      "Vocational welding skills overview",
+      "Safety-first instructional layout",
+      "TVET-ready training brochure design"
+    ]
+  },
+  {
+    id: "practical-welding-brochure",
+    title: "Practical Skills in Welding Brochure",
+    category: "pup-taguig",
+    categoryLabel: "Training Brochure",
+    client: "PUP Taguig",
+    year: "2026",
+    role: "Graphic Designer (Internship)",
+    tools: ["Canva Pro", "InDesign", "Print Design"],
+    featured: false,
+    internship: true,
+    internshipCompany: "PUP Taguig",
+    thumbnail: "/Portfolio/Practical Skills in Welding Brochure/1.png",
+    images: [
+      "/Portfolio/Practical Skills in Welding Brochure/1.png",
+      "/Portfolio/Practical Skills in Welding Brochure/2.png"
+    ],
+    shortDesc: "Hands-on practical welding skills brochure covering key techniques and application methods for TVET training programs.",
+    fullDesc: "A practical welding skills training brochure created during internship at PUP Taguig. Covers applied welding methods, practical exercise guides, and step-by-step technique breakdowns designed to support hands-on vocational training delivery.",
+    highlights: [
+      "Practical welding technique guide",
+      "Hands-on training support layout",
+      "TVET vocational training design"
+    ]
+  },
+  {
+    id: "techskills-electronics-brochure",
+    title: "TechSkills in Electronics Brochure",
+    category: "pup-taguig",
+    categoryLabel: "Training Brochure",
+    client: "PUP Taguig",
+    year: "2026",
+    role: "Graphic Designer (Internship)",
+    tools: ["Canva Pro", "InDesign", "Print Design"],
+    featured: true,
+    internship: true,
+    internshipCompany: "PUP Taguig",
+    thumbnail: "/Portfolio/TechSkills in Electronics Brochure/1.png",
+    images: [
+      "/Portfolio/TechSkills in Electronics Brochure/1.png",
+      "/Portfolio/TechSkills in Electronics Brochure/2.png"
+    ],
+    shortDesc: "Electronics technology skills brochure designed to introduce core technical competencies for TVET learners.",
+    fullDesc: "A technical skills brochure focused on electronics training, produced during internship at PUP Taguig. Features an overview of core electronics competencies, tools and equipment introduction, and career pathway visuals designed for TVET program promotion and student guidance.",
+    highlights: [
+      "Electronics tech skills overview",
+      "Career pathway visual layout",
+      "TVET program promotion design"
+    ]
+  },
+  {
+    id: "technical-welding-brochure",
+    title: "Technical Skills in Welding Brochure",
+    category: "pup-taguig",
+    categoryLabel: "Training Brochure",
+    client: "PUP Taguig",
+    year: "2026",
+    role: "Graphic Designer (Internship)",
+    tools: ["Canva Pro", "InDesign", "Print Design"],
+    featured: false,
+    internship: true,
+    internshipCompany: "PUP Taguig",
+    thumbnail: "/Portfolio/Technical Skills in Welding Brochure/1.png",
+    images: [
+      "/Portfolio/Technical Skills in Welding Brochure/1.png",
+      "/Portfolio/Technical Skills in Welding Brochure/2.png"
+    ],
+    shortDesc: "Advanced technical welding skills brochure covering specialized techniques and industry standards for vocational training.",
+    fullDesc: "A technical welding skills brochure covering advanced welding standards and specialized techniques, created during internship at PUP Taguig. Designed to complement practical training modules with clear instructional design, technical diagrams reference, and structured competency breakdowns.",
+    highlights: [
+      "Advanced welding technical guide",
+      "Industry-standard competency breakdown",
+      "TVET advanced training brochure design"
     ]
   }
 ];
