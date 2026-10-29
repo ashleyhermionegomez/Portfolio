@@ -2,7 +2,9 @@
   command = "npm run build"
   publish = "dist"
 
+# Allow Netlify Forms to intercept POST before the SPA catch-all
 [[redirects]]
   from = "/*"
   to = "/index.html"
   status = 200
+  conditions = {Method = ["GET", "HEAD"]}

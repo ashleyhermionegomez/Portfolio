@@ -130,6 +130,11 @@ export default function ContactModal({ isOpen, onClose }) {
 
   const isOther = formData.service === 'Other / Not listed';
 
+  const encode = (data) =>
+    Object.keys(data)
+      .map((key) => encodeURIComponent(key) + '=' + encodeURIComponent(data[key]))
+      .join('&');
+
   const handleSubmit = async (e) => {
     e.preventDefault();
     setLoading(true);
@@ -142,14 +147,15 @@ export default function ContactModal({ isOpen, onClose }) {
       const response = await fetch('/', {
         method: 'POST',
         headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-        body: new URLSearchParams({
+        body: encode({
           'form-name': 'contact',
+          'bot-field': '',
           name: formData.name,
           email: formData.email,
           service: finalService,
           timeline: formData.timeline,
           message: formData.message,
-        }).toString(),
+        }),
       });
 
       if (response.ok) {
@@ -161,11 +167,11 @@ export default function ContactModal({ isOpen, onClose }) {
           colors: ['#a855f7', '#c084fc', '#818cf8', '#38bdf8'],
         });
       } else {
-        alert('Failed to send message. Please try again or email directly at hermionegomez49@gmail.com');
+        alert(`Submission error (${response.status}). Please email directly at hermionegomez49@gmail.com`);
       }
     } catch (error) {
       console.error('Form submission error:', error);
-      alert('Failed to send message. Please try again or email directly at hermionegomez49@gmail.com');
+      alert('Network error. Please check your connection or email hermionegomez49@gmail.com directly.');
     } finally {
       setLoading(false);
     }
