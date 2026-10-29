@@ -1,6 +1,10 @@
 import React, { useState, useMemo } from 'react';
-import { categories, portfolioProjects } from '../data/portfolioData';
-import { ExternalLink, Layers, Sparkles, Eye, ChevronLeft, ChevronRight, GraduationCap } from 'lucide-react';
+import { portfolioProjects } from '../data/portfolioData';
+import {
+  ExternalLink, Layers, Sparkles, Eye, ChevronLeft, ChevronRight,
+  GraduationCap, LayoutGrid, Palette, Share2, Presentation,
+  Printer, ChartBar, Monitor, Flower, Coffee, Heart, Briefcase, School
+} from 'lucide-react';
 
 export default function PortfolioGrid({ onSelectProject }) {
   const [activeCategory, setActiveCategory] = useState('all');
@@ -58,38 +62,109 @@ export default function PortfolioGrid({ onSelectProject }) {
           </p>
         </div>
 
-        {/* Filter Tabs */}
-        <div className="flex flex-wrap justify-center items-center gap-2 md:gap-3">
-          {categories.map((cat) => {
-            const isActive = activeCategory === cat.id;
-            const projectCount = cat.id === 'all' 
-              ? portfolioProjects.length 
-              : portfolioProjects.filter(p => p.category === cat.id).length;
-            
-            return (
-              <button
-                key={cat.id}
-                onClick={() => handleCategoryChange(cat.id)}
-                className={`px-5 py-3 rounded-xl text-xs sm:text-sm font-semibold transition-all duration-300 flex items-center gap-2.5 ${
-                  isActive
-                    ? 'bg-gradient-to-r from-purple-600 to-indigo-600 text-white shadow-lg shadow-purple-500/30 scale-105 transform'
-                    : 'bg-slate-900/80 text-slate-300 hover:text-white hover:bg-slate-800 border border-slate-800 hover:border-purple-900/50'
-                }`}
-              >
-                <span>{cat.label}</span>
-                <span className={`px-1.5 py-0.5 rounded-md text-[10px] font-bold ${
-                  isActive 
-                    ? 'bg-white/20 text-white' 
-                    : 'bg-slate-800 text-slate-400'
-                }`}>
-                  {projectCount}
-                </span>
-                {isActive && (
-                  <span className="w-1.5 h-1.5 rounded-full bg-white animate-pulse" />
-                )}
-              </button>
-            );
-          })}
+        {/* Filter Bar */}
+        <div className="space-y-3">
+
+          {/* "All Projects" hero button */}
+          <div className="flex justify-center">
+            <button
+              onClick={() => handleCategoryChange('all')}
+              className={`flex items-center gap-2.5 px-6 py-3 rounded-2xl font-bold text-sm transition-all duration-300 ${
+                activeCategory === 'all'
+                  ? 'bg-gradient-to-r from-purple-600 to-indigo-600 text-white shadow-xl shadow-purple-500/30 scale-105'
+                  : 'bg-slate-900/80 text-slate-300 hover:text-white border border-slate-800 hover:border-purple-600/50 hover:bg-slate-800'
+              }`}
+            >
+              <LayoutGrid className="w-4 h-4 shrink-0" />
+              <span>All Projects</span>
+              <span className={`px-2 py-0.5 rounded-full text-[11px] font-bold ${
+                activeCategory === 'all' ? 'bg-white/20 text-white' : 'bg-slate-800 text-slate-400'
+              }`}>
+                {portfolioProjects.length}
+              </span>
+            </button>
+          </div>
+
+          {/* Main category filters */}
+          <div className="flex flex-wrap justify-center gap-2">
+            {[
+              { id: 'branding',      Icon: Palette,      label: 'Brand Identity',   hint: 'Logos & Brand Systems' },
+              { id: 'social',        Icon: Share2,        label: 'Social Media',     hint: 'Posts, Carousels & Ads' },
+              { id: 'presentation',  Icon: Presentation,  label: 'Presentations',    hint: 'Slides & Pitch Decks' },
+              { id: 'print',         Icon: Printer,       label: 'Print & Flyers',   hint: 'Brochures, Banners & Email' },
+              { id: 'infographic',   Icon: ChartBar,      label: 'Infographics',     hint: 'Charts & Data Design' },
+              { id: 'tech',          Icon: Monitor,       label: 'Tech & Product',   hint: 'App & Digital Ads' },
+              { id: 'beauty',        Icon: Flower,        label: 'Beauty & Skincare',hint: 'Cosmetics & Campaigns' },
+              { id: 'food-beverage', Icon: Coffee,        label: 'Food & Beverage',  hint: 'Cafe, Food & Drink' },
+              { id: 'social-cause',  Icon: Heart,         label: 'Social Cause',     hint: 'Awareness & Advocacy' },
+            ].map(({ id, Icon, label, hint }) => {
+              const isActive = activeCategory === id;
+              const count = portfolioProjects.filter(p => p.category === id).length;
+              return (
+                <button
+                  key={id}
+                  onClick={() => handleCategoryChange(id)}
+                  title={hint}
+                  className={`group relative flex items-center gap-2 px-4 py-2.5 rounded-xl text-xs font-semibold transition-all duration-300 ${
+                    isActive
+                      ? 'bg-gradient-to-r from-purple-600 to-indigo-600 text-white shadow-lg shadow-purple-500/25 scale-105'
+                      : 'bg-slate-900/80 text-slate-300 hover:text-white border border-slate-800 hover:border-purple-600/40 hover:bg-slate-800/90'
+                  }`}
+                >
+                  <Icon className="w-3.5 h-3.5 shrink-0" />
+                  <span>{label}</span>
+                  <span className={`px-1.5 py-0.5 rounded-md text-[10px] font-bold leading-none ${
+                    isActive ? 'bg-white/20 text-white' : 'bg-slate-800 text-slate-400 group-hover:bg-slate-700'
+                  }`}>
+                    {count}
+                  </span>
+                  {/* Tooltip */}
+                  <span className="pointer-events-none absolute -top-9 left-1/2 -translate-x-1/2 whitespace-nowrap rounded-lg bg-slate-800 border border-slate-700 px-2.5 py-1 text-[10px] text-slate-300 opacity-0 group-hover:opacity-100 transition-opacity duration-200 hidden sm:block z-10">
+                    {hint}
+                  </span>
+                </button>
+              );
+            })}
+          </div>
+
+          {/* Internship categories — visually separated */}
+          <div className="flex flex-wrap justify-center items-center gap-2 pt-1 border-t border-slate-800/60">
+            <div className="flex items-center gap-1.5 text-[10px] text-amber-500/70 font-semibold uppercase tracking-widest">
+              <GraduationCap className="w-3.5 h-3.5" />
+              <span>Internship Work</span>
+            </div>
+            {[
+              { id: 'corporate-food', Icon: Briefcase, label: 'Orlando Prestige', hint: 'Internship — Italian Food Brand' },
+              { id: 'pup-taguig',     Icon: School,    label: 'PUP Taguig',        hint: 'Internship — TVET Training Materials' },
+            ].map(({ id, Icon, label, hint }) => {
+              const isActive = activeCategory === id;
+              const count = portfolioProjects.filter(p => p.category === id).length;
+              return (
+                <button
+                  key={id}
+                  onClick={() => handleCategoryChange(id)}
+                  title={hint}
+                  className={`group relative flex items-center gap-2 px-4 py-2.5 rounded-xl text-xs font-semibold transition-all duration-300 ${
+                    isActive
+                      ? 'bg-gradient-to-r from-amber-600 to-orange-600 text-white shadow-lg shadow-amber-500/25 scale-105'
+                      : 'bg-slate-900/80 text-amber-400/80 hover:text-amber-300 border border-amber-900/40 hover:border-amber-600/50 hover:bg-slate-800/90'
+                  }`}
+                >
+                  <Icon className="w-3.5 h-3.5 shrink-0" />
+                  <span>{label}</span>
+                  <span className={`px-1.5 py-0.5 rounded-md text-[10px] font-bold leading-none ${
+                    isActive ? 'bg-white/20 text-white' : 'bg-amber-950/60 text-amber-400 group-hover:bg-amber-900/40'
+                  }`}>
+                    {count}
+                  </span>
+                  <span className="pointer-events-none absolute -top-9 left-1/2 -translate-x-1/2 whitespace-nowrap rounded-lg bg-slate-800 border border-slate-700 px-2.5 py-1 text-[10px] text-slate-300 opacity-0 group-hover:opacity-100 transition-opacity duration-200 hidden sm:block z-10">
+                    {hint}
+                  </span>
+                </button>
+              );
+            })}
+          </div>
+
         </div>
 
         {/* Projects Grid */}

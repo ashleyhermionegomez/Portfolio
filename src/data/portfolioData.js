@@ -8,7 +8,7 @@ export const artistProfile = {
   stats: [
     { label: "Design Journey", value: "Self-Taught" },
     { label: "Education Status", value: "Fresh Graduate" },
-    { label: "Curated Showcase", value: "47 Works" },
+    { label: "Curated Showcase", value: "53 Works" },
     { label: "Mindset", value: "Always Learning" }
   ],
   skills: [
@@ -1215,6 +1215,126 @@ export const portfolioProjects = [
       "Advanced welding technical guide",
       "Industry-standard competency breakdown",
       "TVET advanced training brochure design"
+    ]
+  },
+  {
+    id: "coffee-facts-post",
+    title: "Coffee Facts Instagram Post",
+    category: "food-beverage",
+    categoryLabel: "Food & Beverage",
+    client: "Coffee Education Content",
+    year: "2026",
+    role: "Social Media Designer",
+    tools: ["Canva Pro", "Typography", "Content Design"],
+    featured: false,
+    thumbnail: "/Portfolio/Coffee Facts Instagram post.png",
+    images: ["/Portfolio/Coffee Facts Instagram post.png"],
+    shortDesc: "Engaging educational Instagram post sharing fun and interesting coffee facts with a bold, eye-catching layout.",
+    fullDesc: "An informative and visually engaging Instagram post designed to educate and entertain coffee enthusiasts. Features bold typographic layouts, custom icon elements, and a warm coffee-inspired color palette that communicates interesting coffee facts in a scroll-stopping format.",
+    highlights: [
+      "Bold educational content layout",
+      "Coffee-inspired color palette",
+      "Instagram-optimized engagement design"
+    ]
+  },
+  {
+    id: "dark-choco-anti-design",
+    title: "Dark Chocolate Anti-Design Instagram Post",
+    category: "food-beverage",
+    categoryLabel: "Food & Beverage",
+    client: "Dark Chocolate Brand Concept",
+    year: "2026",
+    role: "Graphic Designer",
+    tools: ["Canva Pro", "Experimental Typography"],
+    featured: true,
+    thumbnail: "/Portfolio/Dark chocolate anti-design Instagram post.png",
+    images: ["/Portfolio/Dark chocolate anti-design Instagram post.png"],
+    shortDesc: "Bold anti-design aesthetic Instagram post for a dark chocolate brand, breaking conventional layout rules for standout impact.",
+    fullDesc: "An experimental anti-design Instagram post created for a dark chocolate brand concept. Deliberately breaks conventional design rules through raw typography, deconstructed layouts, and intentional visual tension — creating a uniquely memorable and attention-grabbing social post that stands out in the feed.",
+    highlights: [
+      "Experimental anti-design aesthetic",
+      "Deconstructed typography and layout",
+      "High-contrast dark chocolate branding"
+    ]
+  },
+  {
+    id: "pasta-toppings-tier-list",
+    title: "Pasta Toppings Tier List Instagram Post",
+    category: "food-beverage",
+    categoryLabel: "Food & Beverage",
+    client: "Food Content Creator",
+    year: "2026",
+    role: "Social Media Content Designer",
+    tools: ["Canva Pro", "Infographic Layout"],
+    featured: false,
+    thumbnail: "/Portfolio/Pasta toppings tier list Instagram post.png",
+    images: ["/Portfolio/Pasta toppings tier list Instagram post.png"],
+    shortDesc: "Fun and engaging pasta toppings tier list Instagram post designed to spark conversation and drive audience interaction.",
+    fullDesc: "A playful, trend-driven tier list Instagram post ranking pasta toppings to engage food lovers. Features a structured tier layout, bold food iconography, and a fun conversational tone designed to maximize shares, saves, and comment engagement on Instagram.",
+    highlights: [
+      "Fun trend-driven tier list format",
+      "Audience engagement-focused design",
+      "Bold food content visual style"
+    ]
+  },
+  {
+    id: "spring-collection-banner",
+    title: "Spring Collection Email Hero Banner",
+    category: "print",
+    categoryLabel: "Email Marketing",
+    client: "Spring Fashion Collection",
+    year: "2026",
+    role: "Email Marketing Designer",
+    tools: ["Canva Pro", "Photoshop", "Email Design"],
+    featured: true,
+    thumbnail: "/Portfolio/Spring collection email hero banner.png",
+    images: ["/Portfolio/Spring collection email hero banner.png"],
+    shortDesc: "Fresh, vibrant email hero banner for a spring collection launch with seasonal aesthetics and compelling call-to-action.",
+    fullDesc: "A seasonal email marketing hero banner designed for a spring fashion or lifestyle collection launch. Features soft pastel palettes, floral-inspired typography accents, product photography integration, and a prominent CTA designed to drive click-through rates from email campaigns.",
+    highlights: [
+      "Seasonal spring color palette",
+      "Email hero banner optimized dimensions",
+      "Conversion-focused layout with strong CTA"
+    ]
+  },
+  {
+    id: "tasknest-fake-tweet",
+    title: "TaskNest Fake Tweet Instagram Post",
+    category: "tech",
+    categoryLabel: "App Marketing",
+    client: "TaskNest App Campaign",
+    year: "2026",
+    role: "Social Media Designer",
+    tools: ["Canva Pro", "Social Proof Design"],
+    featured: false,
+    thumbnail: "/Portfolio/TaskNest fake tweet Instagram post.png",
+    images: ["/Portfolio/TaskNest fake tweet Instagram post.png"],
+    shortDesc: "Creative fake tweet format Instagram post for TaskNest app showcasing user testimonials with engaging social proof design.",
+    fullDesc: "A creative social media post using the popular fake tweet format to highlight TaskNest app features and user sentiment. Designed to generate relatability and social proof through a humorous, tweet-style visual that resonates with productivity-focused audiences on Instagram.",
+    highlights: [
+      "Trending fake tweet social format",
+      "Social proof-driven content design",
+      "App engagement and brand awareness"
+    ]
+  },
+  {
+    id: "truffle-pasta-ranked",
+    title: "Truffle Pasta Ranked Instagram Post",
+    category: "food-beverage",
+    categoryLabel: "Food & Beverage",
+    client: "Food Content Creator",
+    year: "2026",
+    role: "Social Media Content Designer",
+    tools: ["Canva Pro", "Food Styling"],
+    featured: false,
+    thumbnail: "/Portfolio/Truffle pasta ranked Instagram post.png",
+    images: ["/Portfolio/Truffle pasta ranked Instagram post.png"],
+    shortDesc: "Stylish ranking-format Instagram post featuring truffle pasta varieties designed for foodie audience engagement.",
+    fullDesc: "A visually appealing ranking Instagram post celebrating truffle pasta with a stylish foodie aesthetic. Uses a ranking card layout with rich, indulgent visual styling, truffle-inspired earthy color palette, and bold food photography to capture the attention of gourmet food enthusiasts.",
+    highlights: [
+      "Ranking card content format",
+      "Gourmet food visual aesthetic",
+      "Foodie audience engagement design"
     ]
   }
 ];
