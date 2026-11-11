@@ -6,7 +6,6 @@ export default function BackToTop() {
 
   useEffect(() => {
     const toggleVisibility = () => {
-      // Show button when page is scrolled down 400px
       if (window.pageYOffset > 400) {
         setIsVisible(true);
       } else {
@@ -30,7 +29,7 @@ export default function BackToTop() {
       {isVisible && (
         <button
           onClick={scrollToTop}
-          className="fixed bottom-8 right-8 z-50 p-4 rounded-full bg-gradient-to-r from-purple-600 to-indigo-600 text-white shadow-2xl shadow-purple-500/30 hover:shadow-purple-500/50 hover:scale-110 transition-all duration-300 group animate-fade-in"
+          className="fixed bottom-8 right-8 z-50 p-3.5 rounded-full bg-gradient-to-r from-blue-600 to-indigo-600 text-white shadow-2xl shadow-blue-600/30 hover:shadow-blue-600/50 hover:scale-110 transition-all duration-300 group animate-fade-in border border-white/20"
           aria-label="Back to top"
         >
           <ArrowUp className="w-5 h-5 group-hover:-translate-y-1 transition-transform" />

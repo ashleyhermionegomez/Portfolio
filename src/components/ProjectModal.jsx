@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from 'react';
-import { X, ChevronLeft, ChevronRight, Maximize2, Layers, Calendar, User, CheckCircle, ExternalLink, GraduationCap } from 'lucide-react';
+import { X, ChevronLeft, ChevronRight, Maximize2, Layers, Calendar, User, CheckCircle, ExternalLink, GraduationCap, Mail, Sparkles } from 'lucide-react';
 import { portfolioProjects } from '../data/portfolioData';
 
-export default function ProjectModal({ project, onClose, onSelectProject }) {
+export default function ProjectModal({ project, onClose, onSelectProject, onInquire }) {
   const [activeImageIdx, setActiveImageIdx] = useState(0);
   const [isZoomed, setIsZoomed] = useState(false);
 
@@ -38,12 +38,12 @@ export default function ProjectModal({ project, onClose, onSelectProject }) {
       <div className="fixed inset-0" onClick={onClose} />
 
       {/* Main Modal Window */}
-      <div className="relative w-full max-w-6xl bg-slate-900 border border-purple-900/40 rounded-3xl shadow-2xl overflow-hidden z-10 my-auto flex flex-col max-h-[92vh]">
+      <div className="relative w-full max-w-6xl bg-[#0c111e] border border-slate-700/80 rounded-3xl shadow-2xl overflow-hidden z-10 my-auto flex flex-col max-h-[92vh]">
         
         {/* Modal Top Header Bar */}
-        <div className="px-6 py-4 bg-slate-950 border-b border-slate-800 flex items-center justify-between shrink-0">
+        <div className="px-6 py-4 bg-[#07090e] border-b border-slate-800 flex items-center justify-between shrink-0">
           <div className="flex items-center gap-3">
-            <span className="px-2.5 py-1 rounded-md text-xs font-bold uppercase tracking-wider bg-purple-500/10 text-purple-400 border border-purple-500/20">
+            <span className="px-2.5 py-1 rounded-md text-xs font-bold uppercase tracking-wider bg-blue-500/10 text-blue-400 border border-blue-500/20">
               {project.categoryLabel}
             </span>
             <h2 className="font-heading font-bold text-lg sm:text-xl text-white truncate max-w-xs sm:max-w-md">
@@ -55,7 +55,7 @@ export default function ProjectModal({ project, onClose, onSelectProject }) {
             <button
               onClick={() => setIsZoomed(!isZoomed)}
               className="p-2 rounded-xl bg-slate-800/80 text-slate-300 hover:text-white hover:bg-slate-700 transition-all"
-              title="Toggle Full Screen Image View"
+              title="Toggle Full View"
             >
               <Maximize2 className="w-4 h-4" />
             </button>
@@ -73,10 +73,10 @@ export default function ProjectModal({ project, onClose, onSelectProject }) {
         <div className="flex-1 overflow-y-auto grid grid-cols-1 lg:grid-cols-12 divide-y lg:divide-y-0 lg:divide-x divide-slate-800">
           
           {/* Left / Top Column: Gallery Lightbox Viewer */}
-          <div className="lg:col-span-7 bg-slate-950 p-4 sm:p-6 flex flex-col justify-between space-y-4">
+          <div className="lg:col-span-7 bg-[#07090e] p-4 sm:p-6 flex flex-col justify-between space-y-4">
             
             {/* Main Stage Image */}
-            <div className="relative flex-1 min-h-[300px] sm:min-h-[420px] flex items-center justify-center rounded-2xl overflow-hidden bg-slate-900 border border-slate-800/80">
+            <div className="relative flex-1 min-h-[300px] sm:min-h-[420px] flex items-center justify-center rounded-2xl overflow-hidden bg-slate-950 border border-slate-800/80">
               <img
                 src={project.images[activeImageIdx]}
                 alt={`${project.title} asset ${activeImageIdx + 1}`}
@@ -91,13 +91,15 @@ export default function ProjectModal({ project, onClose, onSelectProject }) {
                 <>
                   <button
                     onClick={() => setActiveImageIdx((prev) => (prev - 1 + project.images.length) % project.images.length)}
-                    className="absolute left-3 p-2.5 rounded-full bg-slate-950/80 text-slate-200 hover:text-purple-300 hover:bg-slate-950 border border-purple-900/40 backdrop-blur-md transition-all"
+                    className="absolute left-3 p-2.5 rounded-full bg-slate-900/80 text-slate-200 hover:text-blue-300 hover:bg-slate-900 border border-slate-700 backdrop-blur-md transition-all"
+                    aria-label="Previous slide"
                   >
                     <ChevronLeft className="w-5 h-5" />
                   </button>
                   <button
                     onClick={() => setActiveImageIdx((prev) => (prev + 1) % project.images.length)}
-                    className="absolute right-3 p-2.5 rounded-full bg-slate-950/80 text-slate-200 hover:text-purple-300 hover:bg-slate-950 border border-purple-900/40 backdrop-blur-md transition-all"
+                    className="absolute right-3 p-2.5 rounded-full bg-slate-900/80 text-slate-200 hover:text-blue-300 hover:bg-slate-900 border border-slate-700 backdrop-blur-md transition-all"
+                    aria-label="Next slide"
                   >
                     <ChevronRight className="w-5 h-5" />
                   </button>
@@ -106,7 +108,7 @@ export default function ProjectModal({ project, onClose, onSelectProject }) {
 
               {/* Slide Counter Badge */}
               <div className="absolute bottom-3 right-3 px-3 py-1 rounded-lg bg-slate-950/85 text-xs font-mono text-slate-300 border border-slate-800 backdrop-blur-md flex items-center gap-1.5">
-                <Layers className="w-3.5 h-3.5 text-purple-400" />
+                <Layers className="w-3.5 h-3.5 text-blue-400" />
                 <span>{activeImageIdx + 1} / {project.images.length}</span>
               </div>
             </div>
@@ -120,7 +122,7 @@ export default function ProjectModal({ project, onClose, onSelectProject }) {
                     onClick={() => setActiveImageIdx(idx)}
                     className={`relative w-16 h-16 sm:w-20 sm:h-20 rounded-xl overflow-hidden shrink-0 border-2 transition-all ${
                       idx === activeImageIdx
-                        ? 'border-purple-400 shadow-md shadow-purple-400/25 scale-105'
+                        ? 'border-blue-400 shadow-md shadow-blue-500/25 scale-105'
                         : 'border-slate-800 opacity-60 hover:opacity-100'
                     }`}
                   >
@@ -131,22 +133,22 @@ export default function ProjectModal({ project, onClose, onSelectProject }) {
             )}
           </div>
 
-          {/* Right / Bottom Column: Project Metadata & Story */}
-          <div className="lg:col-span-5 p-6 sm:p-8 space-y-6 bg-slate-900/50 flex flex-col justify-between">
+          {/* Right / Bottom Column: Project Metadata & Design Story */}
+          <div className="lg:col-span-5 p-6 sm:p-8 space-y-6 bg-[#0c111e]/70 flex flex-col justify-between">
             <div className="space-y-6">
               
               {/* Client & Metadata Specs */}
               <div className="grid grid-cols-2 gap-3 text-xs">
-                <div className="p-3 rounded-xl bg-slate-950 border border-slate-800 space-y-1">
-                  <span className="text-slate-500 font-mono flex items-center gap-1">
-                    <User className="w-3 h-3 text-purple-400" /> Project Context
+                <div className="p-3 rounded-xl bg-slate-900/90 border border-slate-800 space-y-1">
+                  <span className="text-slate-400 font-mono flex items-center gap-1">
+                    <User className="w-3 h-3 text-blue-400" /> Context / Client
                   </span>
                   <p className="font-semibold text-white truncate">{project.client}</p>
                 </div>
 
-                <div className="p-3 rounded-xl bg-slate-950 border border-slate-800 space-y-1">
-                  <span className="text-slate-500 font-mono flex items-center gap-1">
-                    <Calendar className="w-3 h-3 text-purple-400" /> Year & Role
+                <div className="p-3 rounded-xl bg-slate-900/90 border border-slate-800 space-y-1">
+                  <span className="text-slate-400 font-mono flex items-center gap-1">
+                    <Calendar className="w-3 h-3 text-blue-400" /> Year & Role
                   </span>
                   <p className="font-semibold text-white truncate">{project.year} • {project.role.split(' ')[0]}</p>
                 </div>
@@ -157,51 +159,65 @@ export default function ProjectModal({ project, onClose, onSelectProject }) {
                 <div className="flex items-start gap-3 px-4 py-3 rounded-xl bg-amber-500/10 border border-amber-500/30">
                   <GraduationCap className="w-4 h-4 text-amber-400 shrink-0 mt-0.5" />
                   <div className="text-xs leading-relaxed">
-                    <span className="font-bold text-amber-300">Internship Work</span>
-                    <span className="text-amber-400/80"> — This project was created during my internship at </span>
+                    <span className="font-bold text-amber-300">Verified Client Internship Work</span>
+                    <span className="text-amber-400/90"> — Created during formal internship at </span>
                     <span className="font-semibold text-amber-300">{project.internshipCompany}</span>
-                    <span className="text-amber-400/80">. All design work shown is my own contribution produced during the internship period.</span>
+                    <span className="text-amber-400/90">. Designed for professional production and corporate distribution.</span>
                   </div>
                 </div>
               )}
 
               {/* Design Story */}
               <div className="space-y-2">
-                <h4 className="text-xs font-mono uppercase tracking-wider text-purple-400 font-bold">
-                  Project Description
+                <h4 className="text-xs font-mono uppercase tracking-wider text-blue-400 font-bold">
+                  Project Overview & Concept
                 </h4>
                 <p className="text-sm text-slate-300 leading-relaxed font-light">
                   {project.fullDesc}
                 </p>
               </div>
 
-              {/* Key Visual Highlights */}
+              {/* Key Visual Deliverables */}
               <div className="space-y-3">
-                <h4 className="text-xs font-mono uppercase tracking-wider text-purple-400 font-bold">
+                <h4 className="text-xs font-mono uppercase tracking-wider text-blue-400 font-bold">
                   Key Visual Deliverables
                 </h4>
                 <ul className="space-y-2">
                   {project.highlights.map((h, i) => (
                     <li key={i} className="flex items-start gap-2.5 text-xs text-slate-300">
-                      <CheckCircle className="w-4 h-4 text-purple-400 shrink-0 mt-0.5" />
+                      <CheckCircle className="w-4 h-4 text-blue-400 shrink-0 mt-0.5" />
                       <span>{h}</span>
                     </li>
                   ))}
                 </ul>
               </div>
 
-              {/* Tools Used */}
+              {/* Tools & Disciplines */}
               <div className="space-y-2">
                 <h4 className="text-xs font-mono uppercase tracking-wider text-slate-400 font-bold">
-                  Tools & Discipline
+                  Tools & Disciplines
                 </h4>
                 <div className="flex flex-wrap gap-2">
                   {project.tools.map((t, idx) => (
-                    <span key={idx} className="px-2.5 py-1 rounded-lg bg-slate-800 text-slate-200 text-xs font-medium border border-slate-700/60">
+                    <span key={idx} className="px-2.5 py-1 rounded-lg bg-slate-900 text-slate-200 text-xs font-medium border border-slate-800">
                       {t}
                     </span>
                   ))}
                 </div>
+              </div>
+
+              {/* Fast Action CTA for Recruiters */}
+              <div className="pt-2">
+                <button
+                  onClick={() => {
+                    onClose();
+                    if (onInquire) onInquire(project.categoryLabel);
+                  }}
+                  className="w-full flex items-center justify-center gap-2 py-3 rounded-xl bg-blue-600 hover:bg-blue-500 text-white font-bold text-xs uppercase tracking-wider shadow-lg shadow-blue-600/25 transition-all"
+                >
+                  <Mail className="w-3.5 h-3.5" />
+                  <span>Inquire About Similar Work / Hire</span>
+                </button>
               </div>
 
             </div>
@@ -210,14 +226,14 @@ export default function ProjectModal({ project, onClose, onSelectProject }) {
             <div className="pt-6 border-t border-slate-800 flex items-center justify-between text-xs font-medium">
               <button
                 onClick={() => onSelectProject(prevProject)}
-                className="flex items-center gap-1.5 text-slate-400 hover:text-purple-300 transition-colors"
+                className="flex items-center gap-1.5 text-slate-400 hover:text-blue-300 transition-colors"
               >
                 <ChevronLeft className="w-4 h-4" /> Previous Project
               </button>
               
               <button
                 onClick={() => onSelectProject(nextProject)}
-                className="flex items-center gap-1.5 text-slate-400 hover:text-purple-300 transition-colors"
+                className="flex items-center gap-1.5 text-slate-400 hover:text-blue-300 transition-colors"
               >
                 Next Project <ChevronRight className="w-4 h-4" />
               </button>

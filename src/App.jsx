@@ -14,12 +14,18 @@ export default function App() {
   const [selectedProject, setSelectedProject] = useState(null);
   const [isContactOpen, setIsContactOpen] = useState(false);
   const [isResumeOpen, setIsResumeOpen] = useState(false);
+  const [contactInitialService, setContactInitialService] = useState('');
 
   const scrollToPortfolio = () => {
     const el = document.getElementById('portfolio');
     if (el) {
       el.scrollIntoView({ behavior: 'smooth', block: 'start' });
     }
+  };
+
+  const handleOpenContactWithService = (serviceName = '') => {
+    setContactInitialService(serviceName);
+    setIsContactOpen(true);
   };
 
   // Smooth scroll for all anchor links
@@ -48,20 +54,21 @@ export default function App() {
   }, []);
 
   return (
-    <div className="min-h-screen bg-slate-950 text-slate-100 selection:bg-amber-400 selection:text-slate-950 font-sans">
+    <div className="min-h-screen bg-[#07090e] text-slate-100 selection:bg-blue-600 selection:text-white font-sans relative">
       
       {/* Global Header */}
       <Header
-        onOpenContact={() => setIsContactOpen(true)}
+        onOpenContact={() => handleOpenContactWithService('')}
         onOpenResume={() => setIsResumeOpen(true)}
       />
 
       {/* Main Content Area */}
       <main>
         <Hero
-          onOpenContact={() => setIsContactOpen(true)}
+          onOpenContact={() => handleOpenContactWithService('')}
           onOpenResume={() => setIsResumeOpen(true)}
           scrollToPortfolio={scrollToPortfolio}
+          onSelectProject={(project) => setSelectedProject(project)}
         />
 
         <PortfolioGrid
@@ -69,7 +76,8 @@ export default function App() {
         />
 
         <AboutSection
-          onOpenContact={() => setIsContactOpen(true)}
+          onOpenContact={() => handleOpenContactWithService('')}
+          onOpenResume={() => setIsResumeOpen(true)}
         />
 
         <SkillsSection />
@@ -77,7 +85,7 @@ export default function App() {
 
       {/* Global Footer */}
       <Footer
-        onOpenContact={() => setIsContactOpen(true)}
+        onOpenContact={() => handleOpenContactWithService('')}
         onOpenResume={() => setIsResumeOpen(true)}
       />
 
@@ -86,12 +94,17 @@ export default function App() {
         project={selectedProject}
         onClose={() => setSelectedProject(null)}
         onSelectProject={(project) => setSelectedProject(project)}
+        onInquire={(service) => handleOpenContactWithService(service)}
       />
 
       {/* Contact Inquiry Modal */}
       <ContactModal
         isOpen={isContactOpen}
-        onClose={() => setIsContactOpen(false)}
+        onClose={() => {
+          setIsContactOpen(false);
+          setContactInitialService('');
+        }}
+        initialService={contactInitialService}
       />
 
       {/* Resume / CV Modal */}

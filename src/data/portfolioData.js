@@ -1,41 +1,52 @@
 export const artistProfile = {
-  name: "Graphic Artist Portfolio",
-  title: "Self-Taught Graphic Artist & Recent Graduate",
-  bio: "Passionate self-taught graphic artist and fresh graduate with a strong eye for visual aesthetics, color harmony, and brand storytelling. Driven by curiosity and a relentless commitment to learning, I transform creative ideas into engaging visual content across social media, brand identity, layout design, and digital media.",
-  location: "Available for Remote, Junior & Freelance Roles",
-  status: "Open for Entry-Level Roles & Client Freelance Projects",
-  profilePic: "/Portfolio/PORTFOLIO PIC.JPG",
+  name: "Graphic Artist & Visual Designer",
+  title: "Self-Taught Graphic Artist & Fresh Graduate",
+  bio: "Passionate self-taught graphic artist and fresh graduate with a sharp eye for visual hierarchy, brand identity systems, and high-impact digital collateral. Driven by curiosity, fast adaptability, and creative problem solving, I transform brand visions into clean, engaging visual assets across social media kits, editorial print, slide decks, and identity systems.",
+  location: "Open for Remote & On-Site Junior Roles",
+  status: "Available for Full-Time Junior Roles & Freelance Design",
   stats: [
-    { label: "Design Journey", value: "Self-Taught" },
-    { label: "Education Status", value: "Fresh Graduate" },
-    { label: "Curated Showcase", value: "53 Works" },
-    { label: "Mindset", value: "Always Learning" }
+    { label: "Curated Showcase", value: "56 Works" },
+    { label: "Real Internship Projects", value: "11 Assets" },
+    { label: "Design Discipline", value: "Self-Taught" },
+    { label: "Education Status", value: "Fresh Graduate" }
   ],
   skills: [
-    "Brand Identity & Logo Concepts",
-    "Social Media Graphic Content",
-    "Editorial & PDF Layout Design",
-    "Presentation Decks & Slides",
-    "Typography & Grid Layouts",
-    "Data Graphics & Infographics",
-    "Color Theory & Composition",
-    "Vector Artwork & Image Editing"
+    "Brand Identity & Logo Systems",
+    "Social Media Kits & Carousels",
+    "Editorial & Multi-Page Print",
+    "Executive Slide Decks & Pitch Kits",
+    "Typography & Modular Grid Layouts",
+    "Data Visualizations & Infographics",
+    "Packaging Concepts & Mockups",
+    "Vector Illustration & Asset Prep"
   ],
   tools: [
     { name: "Figma", level: "Proficient", icon: "Layout" },
     { name: "Canva Pro", level: "Advanced", icon: "Sparkles" },
-    { name: "Design Fundamentals", level: "Self-Taught", icon: "Target" }
+    { name: "Typography & Layout", level: "Proficient", icon: "BookOpen" },
+    { name: "Color Systems & Grid", level: "Proficient", icon: "Target" },
+    { name: "Social Content Design", level: "Proficient", icon: "Image" },
+    { name: "Vector & Digital Assets", level: "Proficient", icon: "PenTool" }
   ],
   contact: {
-    email: "graphic.artist.junior@example.com",
-    phone: "+1 (555) 234-5678",
-    location: "Global Remote",
+    email: "hermionegomez49@gmail.com",
+    phone: "+63 900 000 0000",
+    location: "Metro Manila, Philippines (Available Globally Remote)",
     linkedin: "https://linkedin.com",
     behance: "https://behance.net",
     dribbble: "https://dribbble.com",
     instagram: "https://instagram.com"
   }
 };
+
+export const featuredProjectIds = [
+  "matcha-mondays",
+  "vantora-identity",
+  "lumiere-botanica",
+  "ai-finance-carousel",
+  "orlando-corporate-profile",
+  "travel-brochure"
+];
 
 export const categories = [
   { id: "all",              label: "All Projects" },
@@ -61,7 +72,7 @@ export const portfolioProjects = [
     client: "Matcha Mondays Concept Project",
     year: "2026",
     role: "Graphic Artist (Personal & Concept Project)",
-    tools: ["Adobe Illustrator", "Photoshop", "Brand Design"],
+    tools: ["Figma", "Canva Pro", "Brand Design"],
     featured: true,
     thumbnail: "/Portfolio/Matcha Mondays branding and social media kit/1.png",
     images: [
@@ -87,7 +98,7 @@ export const portfolioProjects = [
     client: "Vantora Identity Concept",
     year: "2025",
     role: "Junior Brand Designer",
-    tools: ["InDesign", "Illustrator", "Grid Layout"],
+    tools: ["Figma", "Canva Pro", "Grid Layout"],
     featured: true,
     thumbnail: "/Portfolio/Vantora corporate identity system/1.png",
     images: [
@@ -111,7 +122,7 @@ export const portfolioProjects = [
     client: "Lumière Botanica Cosmetics",
     year: "2026",
     role: "Graphic Designer & Visual Content Creator",
-    tools: ["Photoshop", "Illustrator", "Packaging Layout"],
+    tools: ["Figma", "Canva Pro", "Packaging Layout"],
     featured: true,
     thumbnail: "/Portfolio/Lumière Botanica launch campaign/1.png",
     images: [
@@ -138,7 +149,7 @@ export const portfolioProjects = [
     client: "Neon Petal Beauty Concept",
     year: "2025",
     role: "Graphic Designer",
-    tools: ["Photoshop", "Figma", "Color Styling"],
+    tools: ["Figma", "Canva Pro", "Color Styling"],
     featured: false,
     thumbnail: "/Portfolio/Neon Petal makeup campaign/1.png",
     images: [
@@ -164,7 +175,7 @@ export const portfolioProjects = [
     client: "Tech Marketing Project",
     year: "2026",
     role: "Social Media Graphic Artist",
-    tools: ["Figma", "Illustrator", "Social Content"],
+    tools: ["Figma", "Canva Pro", "Social Content"],
     featured: true,
     thumbnail: "/Portfolio/Social media campaign (LinkedIn)  Tech marketing/1.png",
     images: [
@@ -190,7 +201,7 @@ export const portfolioProjects = [
     client: "FinTech Media Project",
     year: "2026",
     role: "Visual Content Designer",
-    tools: ["Figma", "Illustrator", "Brand Toolkit"],
+    tools: ["Figma", "Canva Pro", "Brand Toolkit"],
     featured: true,
     thumbnail: "/Portfolio/AI agents in finance and accounting LinkedIn carousel/BRAND TOOLKIT.png",
     images: [
@@ -221,7 +232,7 @@ export const portfolioProjects = [
     client: "Harbor & Pine Group Project",
     year: "2025",
     role: "Junior Visual Designer",
-    tools: ["Photoshop", "Canva Pro", "Typography"],
+    tools: ["Canva Pro", "Figma", "Typography"],
     featured: false,
     thumbnail: "/Portfolio/Harbor & Pine Group recruitment social set/1.png",
     images: [
@@ -247,7 +258,7 @@ export const portfolioProjects = [
     client: "Nexus AI Concept Project",
     year: "2026",
     role: "Visual Designer",
-    tools: ["Figma", "Photoshop", "UI Visuals"],
+    tools: ["Figma", "Canva Pro", "UI Visuals"],
     featured: false,
     thumbnail: "/Portfolio/AI assistant launch visual set/1.png",
     images: [
@@ -271,7 +282,7 @@ export const portfolioProjects = [
     client: "Cloudwise Systems Project",
     year: "2026",
     role: "Presentation & Slide Designer",
-    tools: ["Figma / PowerPoint", "Illustrator", "Slide Design"],
+    tools: ["Figma", "Canva Pro", "Slide Design"],
     featured: true,
     thumbnail: "/Portfolio/Cloudwise sales deck/1.png",
     images: [
@@ -298,7 +309,7 @@ export const portfolioProjects = [
     client: "Sonic Brand Media Project",
     year: "2025",
     role: "Editorial & Graphic Artist",
-    tools: ["InDesign", "Photoshop", "Typography"],
+    tools: ["Canva Pro", "Figma", "Typography"],
     featured: false,
     thumbnail: "/Portfolio/Audio branding  Social media (Editorial)/1.png",
     images: [
@@ -324,7 +335,7 @@ export const portfolioProjects = [
     client: "Apex PDF Design Project",
     year: "2025",
     role: "Layout Artist",
-    tools: ["Adobe InDesign", "Photoshop", "Grid System"],
+    tools: ["Canva Pro", "Figma", "Grid System"],
     featured: false,
     thumbnail: "/Portfolio/Layout design  Print and PDF (Corporate)/1.png",
     images: [
@@ -347,7 +358,7 @@ export const portfolioProjects = [
     client: "Data Insights Project",
     year: "2026",
     role: "Infographic Visualizer",
-    tools: ["Illustrator", "Data Layout", "Icon Design"],
+    tools: ["Figma", "Canva Pro", "Data Layout"],
     featured: true,
     thumbnail: "/Portfolio/Infographic  Data visualization.png",
     images: [
@@ -369,7 +380,7 @@ export const portfolioProjects = [
     client: "Recruitment Branding Project",
     year: "2026",
     role: "Graphic Designer & Visual Content Creator",
-    tools: ["Illustrator", "Photoshop", "Canva Pro"],
+    tools: ["Canva Pro", "Figma", "Social Layout"],
     featured: true,
     thumbnail: "/Portfolio/Recruitment & Employer Branding/1.png",
     images: [
@@ -393,7 +404,7 @@ export const portfolioProjects = [
     client: "Orlando Prestige Inc.",
     year: "2026",
     role: "Social Media Graphic Artist & Ad Designer",
-    tools: ["Photoshop", "Illustrator", "Canva Pro"],
+    tools: ["Canva Pro", "Figma", "Product Design"],
     featured: true,
     internship: true,
     internshipCompany: "Orlando Prestige Inc.",
@@ -773,7 +784,7 @@ export const portfolioProjects = [
     client: "Remote Work Research Project",
     year: "2026",
     role: "Infographic Designer",
-    tools: ["Illustrator", "Data Visualization", "Icon Design"],
+    tools: ["Figma", "Canva Pro", "Data Visualization"],
     featured: true,
     thumbnail: "/Portfolio/Remote work statistics infographic.png",
     images: ["/Portfolio/Remote work statistics infographic.png"],
@@ -793,7 +804,7 @@ export const portfolioProjects = [
     client: "Skincare Education Project",
     year: "2026",
     role: "Beauty Infographic Designer",
-    tools: ["Canva Pro", "Illustrator", "Educational Design"],
+    tools: ["Canva Pro", "Figma", "Educational Design"],
     featured: false,
     thumbnail: "/Portfolio/Serum vs. Moisturizer infographic.png",
     images: ["/Portfolio/Serum vs. Moisturizer infographic.png"],
@@ -941,7 +952,7 @@ export const portfolioProjects = [
     client: "Orlando Prestige Inc.",
     year: "2026",
     role: "Product Brochure Designer",
-    tools: ["InDesign", "Illustrator", "Print Design"],
+    tools: ["Canva Pro", "Figma", "Print Design"],
     featured: true,
     internship: true,
     internshipCompany: "Orlando Prestige Inc.",
@@ -976,7 +987,7 @@ export const portfolioProjects = [
     client: "Orlando Prestige Inc.",
     year: "2026",
     role: "Catalogue Designer & Layout Artist",
-    tools: ["InDesign", "Photoshop", "Catalogue Design"],
+    tools: ["Canva Pro", "Figma", "Catalogue Design"],
     featured: true,
     internship: true,
     internshipCompany: "Orlando Prestige Inc.",
@@ -1080,7 +1091,7 @@ export const portfolioProjects = [
     client: "Lumen Ops",
     year: "2026",
     role: "Infographic Designer",
-    tools: ["Canva Pro", "Illustrator", "Data Design"],
+    tools: ["Canva Pro", "Figma", "Data Design"],
     featured: false,
     thumbnail: "/Portfolio/Lumen Ops process infographic.png",
     images: ["/Portfolio/Lumen Ops process infographic.png"],
@@ -1100,7 +1111,7 @@ export const portfolioProjects = [
     client: "PUP Taguig",
     year: "2026",
     role: "Graphic Designer (Internship)",
-    tools: ["Canva Pro", "InDesign", "Print Design"],
+    tools: ["Canva Pro", "Figma", "Print Design"],
     featured: true,
     internship: true,
     internshipCompany: "PUP Taguig",
@@ -1125,7 +1136,7 @@ export const portfolioProjects = [
     client: "PUP Taguig",
     year: "2026",
     role: "Graphic Designer (Internship)",
-    tools: ["Canva Pro", "InDesign", "Print Design"],
+    tools: ["Canva Pro", "Figma", "Print Design"],
     featured: false,
     internship: true,
     internshipCompany: "PUP Taguig",
@@ -1150,7 +1161,7 @@ export const portfolioProjects = [
     client: "PUP Taguig",
     year: "2026",
     role: "Graphic Designer (Internship)",
-    tools: ["Canva Pro", "InDesign", "Print Design"],
+    tools: ["Canva Pro", "Figma", "Print Design"],
     featured: false,
     internship: true,
     internshipCompany: "PUP Taguig",
@@ -1175,7 +1186,7 @@ export const portfolioProjects = [
     client: "PUP Taguig",
     year: "2026",
     role: "Graphic Designer (Internship)",
-    tools: ["Canva Pro", "InDesign", "Print Design"],
+    tools: ["Canva Pro", "Figma", "Print Design"],
     featured: true,
     internship: true,
     internshipCompany: "PUP Taguig",
@@ -1200,7 +1211,7 @@ export const portfolioProjects = [
     client: "PUP Taguig",
     year: "2026",
     role: "Graphic Designer (Internship)",
-    tools: ["Canva Pro", "InDesign", "Print Design"],
+    tools: ["Canva Pro", "Figma", "Print Design"],
     featured: false,
     internship: true,
     internshipCompany: "PUP Taguig",
@@ -1285,7 +1296,7 @@ export const portfolioProjects = [
     client: "Spring Fashion Collection",
     year: "2026",
     role: "Email Marketing Designer",
-    tools: ["Canva Pro", "Photoshop", "Email Design"],
+    tools: ["Canva Pro", "Figma", "Email Design"],
     featured: true,
     thumbnail: "/Portfolio/Spring collection email hero banner.png",
     images: ["/Portfolio/Spring collection email hero banner.png"],
@@ -1335,6 +1346,72 @@ export const portfolioProjects = [
       "Ranking card content format",
       "Gourmet food visual aesthetic",
       "Foodie audience engagement design"
+    ]
+  },
+  {
+    id: "digital-marketing-ad",
+    title: "Digital Marketing Agency Social Media Ad",
+    category: "social",
+    categoryLabel: "Social Media Ad",
+    client: "GrowthPulse Digital Agency",
+    year: "2026",
+    role: "Graphic Designer & Social Media Artist",
+    tools: ["Figma", "Canva Pro", "Ad Creative"],
+    featured: false,
+    thumbnail: "/Portfolio/Digital marketing social media advertisement.png",
+    images: [
+      "/Portfolio/Digital marketing social media advertisement.png"
+    ],
+    shortDesc: "High-conversion digital marketing agency advertisement post highlighting growth analytics and ROI metrics.",
+    fullDesc: "Designed for social media marketing, this promotional graphic uses high-contrast typography, engaging statistics, and a sleek modern dark layout to drive consultation inquiries and showcase digital marketing capabilities.",
+    highlights: [
+      "High-impact 4:5 portrait social ad format (1080x1350)",
+      "Bold typographic hierarchy and compelling CTA buttons",
+      "Modern tech-forward color palette with clean visual balance"
+    ]
+  },
+  {
+    id: "fashion-collection-promotion",
+    title: "Fashion Collection Promotion Poster",
+    category: "beauty",
+    categoryLabel: "Fashion & Apparel Ad",
+    client: "Aura Apparel Launch Campaign",
+    year: "2026",
+    role: "Visual Designer & Art Director",
+    tools: ["Figma", "Canva Pro", "Visual Composition"],
+    featured: false,
+    thumbnail: "/Portfolio/Fashion collection promotion.png",
+    images: [
+      "/Portfolio/Fashion collection promotion.png"
+    ],
+    shortDesc: "Sophisticated editorial fashion collection promotional poster featuring contemporary styling and seasonal campaign layout.",
+    fullDesc: "Created as an apparel campaign visual, this design pairs elegant editorial typography with balanced layout composition to highlight the seasonal fashion line. Designed for both digital promotion and printed lookbooks.",
+    highlights: [
+      "Sophisticated editorial typography and framing",
+      "High-contrast visual hierarchy tailored for fashion audiences",
+      "Multi-platform design suitable for Instagram stories and print flyers"
+    ]
+  },
+  {
+    id: "gourmet-burger-ad",
+    title: "Gourmet Burger Social Media Advertisement",
+    category: "food-beverage",
+    categoryLabel: "Food & Beverage Ad",
+    client: "The Craft Burger Co.",
+    year: "2026",
+    role: "Graphic Artist & Content Creator",
+    tools: ["Figma", "Canva Pro", "Food Marketing"],
+    featured: false,
+    thumbnail: "/Portfolio/Gourmet burger social media advertisement.png",
+    images: [
+      "/Portfolio/Gourmet burger social media advertisement.png"
+    ],
+    shortDesc: "Mouth-watering gourmet burger promotional square social ad featuring dynamic typography, badge accents, and bold appetite appeal.",
+    fullDesc: "Crafted for food and beverage social marketing, this 1:1 square Instagram ad highlights craft culinary offerings with appetizing visual elements, energetic discount badges, and engaging promotional copy.",
+    highlights: [
+      "Eye-catching 1:1 square social ad format (1181x1181)",
+      "Vibrant culinary color palette with high contrast",
+      "Engaging promotional badges and call-to-action details"
     ]
   }
 ];
