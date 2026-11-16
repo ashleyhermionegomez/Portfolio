@@ -4,7 +4,8 @@ import {
   ExternalLink, Layers, Sparkles, Eye, ChevronLeft, ChevronRight,
   GraduationCap, LayoutGrid, Palette, Share2, Presentation,
   Printer, ChartBar, Monitor, Flower, Coffee, Heart, Briefcase,
-  Search, X, List, SlidersHorizontal, ArrowUpDown, CheckCircle2
+  Search, X, List, SlidersHorizontal, ArrowUpDown, CheckCircle2,
+  Play, Film
 } from 'lucide-react';
 
 export default function PortfolioGrid({ onSelectProject }) {
@@ -22,6 +23,8 @@ export default function PortfolioGrid({ onSelectProject }) {
     // Filter by tab
     if (activeTab === 'featured') {
       list = list.filter(p => featuredProjectIds.includes(p.id) || p.featured);
+    } else if (activeTab === 'video-ads') {
+      list = list.filter(p => p.category === 'video-ads' || p.isVideo);
     } else if (activeTab === 'internship') {
       list = list.filter(p => p.internship);
     } else if (activeTab === 'all') {
@@ -39,7 +42,8 @@ export default function PortfolioGrid({ onSelectProject }) {
         p.shortDesc.toLowerCase().includes(q) ||
         p.categoryLabel.toLowerCase().includes(q) ||
         p.tools.some(t => t.toLowerCase().includes(q)) ||
-        (p.internshipCompany && p.internshipCompany.toLowerCase().includes(q))
+        (p.internshipCompany && p.internshipCompany.toLowerCase().includes(q)) ||
+        (p.isVideo && (q.includes('video') || q.includes('motion') || q.includes('ad') || q.includes('reel')))
       );
     }
 
@@ -87,8 +91,9 @@ export default function PortfolioGrid({ onSelectProject }) {
   };
 
   const tabs = [
-    { id: 'featured',     label: '⭐ Recruiter Fast-Track', count: featuredProjectIds.length, hint: 'Top 6 Flagship Case Studies' },
-    { id: 'all',          label: 'All Projects',           count: portfolioProjects.length, hint: `Complete ${portfolioProjects.length} Design Works` },
+    { id: 'featured',     label: '⭐ Recruiter Fast-Track', count: featuredProjectIds.length, hint: 'Top Flagship Case Studies' },
+    { id: 'all',          label: 'All Projects',           count: portfolioProjects.length, hint: `Complete ${portfolioProjects.length} Works` },
+    { id: 'video-ads',    label: '🎬 Video & Motion Ads',  count: portfolioProjects.filter(p => p.category === 'video-ads' || p.isVideo).length, hint: '11 High-Impact Motion Ads & Video Posters' },
     { id: 'internship',   label: '💼 Real Internship',      count: portfolioProjects.filter(p => p.internship).length, hint: 'Orlando Prestige & PUP Taguig' },
     { id: 'branding',     label: 'Brand Identity',         count: portfolioProjects.filter(p => p.category === 'branding').length, hint: 'Logos & Brand Guidelines' },
     { id: 'social',       label: 'Social Media & Ads',     count: portfolioProjects.filter(p => p.category === 'social').length, hint: 'Carousels, Campaigns & Posts' },
@@ -224,6 +229,7 @@ export default function PortfolioGrid({ onSelectProject }) {
               const isActive = activeTab === tab.id;
               const isFeatured = tab.id === 'featured';
               const isInternship = tab.id === 'internship';
+              const isVideoAds = tab.id === 'video-ads';
 
               return (
                 <button
@@ -234,9 +240,13 @@ export default function PortfolioGrid({ onSelectProject }) {
                     isActive
                       ? isFeatured
                         ? 'bg-gradient-to-r from-blue-600 to-indigo-600 text-white shadow-lg shadow-blue-500/25 scale-[1.03]'
+                        : isVideoAds
+                        ? 'bg-gradient-to-r from-cyan-500 to-blue-600 text-white shadow-lg shadow-cyan-500/25 scale-[1.03]'
                         : isInternship
                         ? 'bg-gradient-to-r from-amber-500 to-orange-500 text-slate-950 shadow-lg shadow-amber-500/25 scale-[1.03]'
                         : 'bg-blue-600 text-white shadow-md shadow-blue-600/30 scale-[1.03]'
+                      : isVideoAds
+                      ? 'bg-slate-900/80 text-cyan-300 border border-cyan-900/50 hover:border-cyan-500/50 hover:bg-slate-800'
                       : isInternship
                       ? 'bg-slate-900/80 text-amber-300/90 border border-amber-900/40 hover:border-amber-600/60 hover:bg-slate-800'
                       : isFeatured
@@ -248,7 +258,11 @@ export default function PortfolioGrid({ onSelectProject }) {
                   <span className={`px-1.5 py-0.5 rounded-md text-[10px] font-bold leading-none ${
                     isActive
                       ? isInternship ? 'bg-slate-950/40 text-slate-900' : 'bg-white/20 text-white'
-                      : isInternship ? 'bg-amber-950/60 text-amber-300' : 'bg-slate-800 text-slate-400'
+                      : isInternship
+                      ? 'bg-amber-950/60 text-amber-300'
+                      : isVideoAds
+                      ? 'bg-cyan-950/60 text-cyan-300'
+                      : 'bg-slate-800 text-slate-400'
                   }`}>
                     {tab.count}
                   </span>
@@ -322,18 +336,34 @@ export default function PortfolioGrid({ onSelectProject }) {
                     
                     {/* Hover Overlay */}
                     <div className="absolute inset-0 bg-slate-950/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center backdrop-blur-[2px]">
-                      <div className="transform translate-y-3 group-hover:translate-y-0 transition-transform duration-300 flex items-center gap-2 px-4 py-2 rounded-xl bg-blue-600 text-white font-bold text-xs uppercase tracking-wider shadow-xl shadow-blue-600/30">
-                        <Eye className="w-4 h-4" />
-                        <span>Inspect Project</span>
+                      <div className={`transform translate-y-3 group-hover:translate-y-0 transition-transform duration-300 flex items-center gap-2 px-4 py-2 rounded-xl text-white font-bold text-xs uppercase tracking-wider shadow-xl ${
+                        project.isVideo ? 'bg-gradient-to-r from-cyan-600 to-blue-600 shadow-cyan-600/30' : 'bg-blue-600 shadow-blue-600/30'
+                      }`}>
+                        {project.isVideo ? (
+                          <>
+                            <Play className="w-4 h-4 fill-white" />
+                            <span>Play Video Ad</span>
+                          </>
+                        ) : (
+                          <>
+                            <Eye className="w-4 h-4" />
+                            <span>Inspect Project</span>
+                          </>
+                        )}
                       </div>
                     </div>
 
                     {/* Top Badges */}
-                    <div className="absolute top-3 left-3 right-3 flex items-center justify-between pointer-events-none">
-                      <div className="flex items-center gap-1.5">
+                    <div className="absolute top-3 left-3 right-3 flex items-center justify-between pointer-events-none gap-2">
+                      <div className="flex items-center gap-1.5 flex-wrap">
                         <span className="px-2.5 py-1 rounded-lg text-[10px] font-bold uppercase tracking-wider bg-slate-950/90 text-blue-300 border border-blue-500/30 backdrop-blur-md">
                           {project.categoryLabel}
                         </span>
+                        {project.isNew && (
+                          <span className="px-2 py-0.5 rounded-lg text-[10px] font-bold bg-gradient-to-r from-emerald-500 to-cyan-500 text-slate-950 shadow-sm flex items-center gap-1 animate-pulse">
+                            ✨ New
+                          </span>
+                        )}
                         {isFlagship && (
                           <span className="px-2 py-0.5 rounded-lg text-[10px] font-semibold bg-blue-600 text-white shadow-sm flex items-center gap-1">
                             ⭐ Top Pick
@@ -341,13 +371,26 @@ export default function PortfolioGrid({ onSelectProject }) {
                         )}
                       </div>
                       
-                      {project.images.length > 1 && (
-                        <span className="px-2.5 py-1 rounded-lg text-[10px] font-mono bg-slate-950/90 text-slate-300 border border-slate-700 backdrop-blur-md flex items-center gap-1.5">
+                      {project.isVideo ? (
+                        <span className="px-2.5 py-1 rounded-lg text-[10px] font-mono bg-slate-950/90 text-cyan-300 border border-cyan-500/40 backdrop-blur-md flex items-center gap-1.5 shadow-md shrink-0">
+                          <Film className="w-3 h-3 text-cyan-400" />
+                          {project.duration || 'Motion Ad'}
+                        </span>
+                      ) : project.images.length > 1 ? (
+                        <span className="px-2.5 py-1 rounded-lg text-[10px] font-mono bg-slate-950/90 text-slate-300 border border-slate-700 backdrop-blur-md flex items-center gap-1.5 shrink-0">
                           <Layers className="w-3 h-3 text-blue-400" />
                           {project.images.length} Assets
                         </span>
-                      )}
+                      ) : null}
                     </div>
+
+                    {/* Bottom overlay badge for videos */}
+                    {project.isVideo && (
+                      <div className="absolute bottom-3 left-3 pointer-events-none flex items-center gap-1.5 px-2.5 py-1 rounded-lg bg-slate-950/90 text-cyan-300 border border-cyan-500/40 text-[10px] font-mono backdrop-blur-md shadow-lg">
+                        <Play className="w-3 h-3 fill-cyan-400 text-cyan-400" />
+                        <span>Watch Video Ad</span>
+                      </div>
+                    )}
                   </div>
 
                   {/* Card Body */}
@@ -389,7 +432,11 @@ export default function PortfolioGrid({ onSelectProject }) {
                         </div>
 
                         <span className="text-blue-400 font-semibold flex items-center gap-1 group-hover:translate-x-1 transition-transform text-xs">
-                          Inspect <ExternalLink className="w-3 h-3" />
+                          {project.isVideo ? (
+                            <>Watch <Play className="w-3 h-3 fill-current" /></>
+                          ) : (
+                            <>Inspect <ExternalLink className="w-3 h-3" /></>
+                          )}
                         </span>
                       </div>
                     </div>
@@ -429,19 +476,29 @@ export default function PortfolioGrid({ onSelectProject }) {
                         {/* Title & Thumbnail */}
                         <td className="py-3 px-4">
                           <div className="flex items-center gap-3">
-                            <div className="w-12 h-10 rounded-lg overflow-hidden bg-slate-950 shrink-0 border border-slate-800">
+                            <div className="w-12 h-10 rounded-lg overflow-hidden bg-slate-950 shrink-0 border border-slate-800 relative">
                               <img
                                 src={project.thumbnail}
                                 alt={project.title}
                                 className="w-full h-full object-cover"
                                 loading="lazy"
                               />
+                              {project.isVideo && (
+                                <div className="absolute inset-0 bg-slate-950/40 flex items-center justify-center">
+                                  <Play className="w-3.5 h-3.5 text-cyan-400 fill-cyan-400" />
+                                </div>
+                              )}
                             </div>
                             <div>
-                              <div className="flex items-center gap-1.5">
+                              <div className="flex items-center gap-1.5 flex-wrap">
                                 <span className="font-heading font-bold text-white group-hover:text-blue-400 transition-colors text-sm">
                                   {project.title}
                                 </span>
+                                {project.isNew && (
+                                  <span className="px-1.5 py-0.5 rounded text-[9px] font-bold bg-emerald-500/20 text-emerald-300 border border-emerald-500/30">
+                                    ✨ New
+                                  </span>
+                                )}
                                 {isFlagship && (
                                   <span className="px-1.5 py-0.5 rounded text-[9px] font-semibold bg-blue-600/30 text-blue-300 border border-blue-500/30">
                                     ⭐ Top Pick
@@ -487,7 +544,14 @@ export default function PortfolioGrid({ onSelectProject }) {
 
                         {/* Deliverables Count */}
                         <td className="py-3 px-4 text-center whitespace-nowrap font-mono text-slate-300">
-                          {project.images.length} {project.images.length === 1 ? 'Asset' : 'Assets'}
+                          {project.isVideo ? (
+                            <span className="inline-flex items-center gap-1 text-cyan-300 font-semibold">
+                              <Film className="w-3 h-3 text-cyan-400" />
+                              {project.duration || 'Motion Ad'}
+                            </span>
+                          ) : (
+                            <span>{project.images.length} {project.images.length === 1 ? 'Asset' : 'Assets'}</span>
+                          )}
                         </td>
 
                         {/* Action */}
@@ -497,10 +561,14 @@ export default function PortfolioGrid({ onSelectProject }) {
                               e.stopPropagation();
                               onSelectProject(project);
                             }}
-                            className="px-3 py-1.5 rounded-lg bg-blue-600/20 hover:bg-blue-600 text-blue-300 hover:text-white transition-all text-xs font-semibold inline-flex items-center gap-1"
+                            className={`px-3 py-1.5 rounded-lg transition-all text-xs font-semibold inline-flex items-center gap-1 ${
+                              project.isVideo
+                                ? 'bg-cyan-600/20 hover:bg-cyan-600 text-cyan-300 hover:text-white'
+                                : 'bg-blue-600/20 hover:bg-blue-600 text-blue-300 hover:text-white'
+                            }`}
                           >
-                            <span>Inspect</span>
-                            <ExternalLink className="w-3 h-3" />
+                            <span>{project.isVideo ? 'Watch' : 'Inspect'}</span>
+                            {project.isVideo ? <Play className="w-3 h-3 fill-current" /> : <ExternalLink className="w-3 h-3" />}
                           </button>
                         </td>
                       </tr>

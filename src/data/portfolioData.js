@@ -5,28 +5,28 @@ export const artistProfile = {
   location: "Open for Remote & On-Site Junior Roles",
   status: "Available for Full-Time Junior Roles & Freelance Design",
   stats: [
-    { label: "Curated Showcase", value: "56 Works" },
+    { label: "Curated Showcase", value: "67 Works" },
+    { label: "Motion & Video Ads", value: "11 Reels" },
     { label: "Real Internship Projects", value: "11 Assets" },
-    { label: "Design Discipline", value: "Self-Taught" },
-    { label: "Education Status", value: "Fresh Graduate" }
+    { label: "Education Status", value: "Fresh Graduate (IT)" }
   ],
   skills: [
     "Brand Identity & Logo Systems",
+    "Short-Form Video Ads & Motion Graphics",
     "Social Media Kits & Carousels",
     "Editorial & Multi-Page Print",
+    "Kinetic Typography & Social Reels",
     "Executive Slide Decks & Pitch Kits",
-    "Typography & Modular Grid Layouts",
     "Data Visualizations & Infographics",
-    "Packaging Concepts & Mockups",
-    "Vector Illustration & Asset Prep"
+    "Packaging Concepts & Mockups"
   ],
   tools: [
     { name: "Figma", level: "Proficient", icon: "Layout" },
     { name: "Canva Pro", level: "Advanced", icon: "Sparkles" },
+    { name: "Motion & Video Ads", level: "Advanced", icon: "Play" },
     { name: "Typography & Layout", level: "Proficient", icon: "BookOpen" },
     { name: "Color Systems & Grid", level: "Proficient", icon: "Target" },
-    { name: "Social Content Design", level: "Proficient", icon: "Image" },
-    { name: "Vector & Digital Assets", level: "Proficient", icon: "PenTool" }
+    { name: "Social Content Design", level: "Proficient", icon: "Image" }
   ],
   contact: {
     email: "hermionegomez49@gmail.com",
@@ -40,6 +40,7 @@ export const artistProfile = {
 };
 
 export const featuredProjectIds = [
+  "ice-coffee-motion-ad",
   "matcha-mondays",
   "vantora-identity",
   "lumiere-botanica",
@@ -50,6 +51,7 @@ export const featuredProjectIds = [
 
 export const categories = [
   { id: "all",              label: "All Projects" },
+  { id: "video-ads",        label: "Motion & Video Ads" },
   { id: "branding",        label: "Brand Identity" },
   { id: "social",          label: "Social Media" },
   { id: "presentation",    label: "Presentations & Decks" },
@@ -1358,6 +1360,7 @@ export const portfolioProjects = [
     role: "Graphic Designer & Social Media Artist",
     tools: ["Figma", "Canva Pro", "Ad Creative"],
     featured: false,
+    isNew: true,
     thumbnail: "/Portfolio/Digital marketing social media advertisement.png",
     images: [
       "/Portfolio/Digital marketing social media advertisement.png"
@@ -1380,6 +1383,7 @@ export const portfolioProjects = [
     role: "Visual Designer & Art Director",
     tools: ["Figma", "Canva Pro", "Visual Composition"],
     featured: false,
+    isNew: true,
     thumbnail: "/Portfolio/Fashion collection promotion.png",
     images: [
       "/Portfolio/Fashion collection promotion.png"
@@ -1402,6 +1406,7 @@ export const portfolioProjects = [
     role: "Graphic Artist & Content Creator",
     tools: ["Figma", "Canva Pro", "Food Marketing"],
     featured: false,
+    isNew: true,
     thumbnail: "/Portfolio/Gourmet burger social media advertisement.png",
     images: [
       "/Portfolio/Gourmet burger social media advertisement.png"
@@ -1412,6 +1417,314 @@ export const portfolioProjects = [
       "Eye-catching 1:1 square social ad format (1181x1181)",
       "Vibrant culinary color palette with high contrast",
       "Engaging promotional badges and call-to-action details"
+    ]
+  },
+  {
+    id: "ice-coffee-motion-ad",
+    title: "Time to Grab an Iced Coffee — Interactive Incoming Call Motion Ad",
+    category: "video-ads",
+    categoryLabel: "Motion Video Ad",
+    client: "Brew & Bloom Concept Studio",
+    year: "2026",
+    role: "Motion Designer & Graphic Artist",
+    tools: ["Canva Pro", "Motion Graphics", "Sound Design", "Figma"],
+    featured: true,
+    isNew: true,
+    isVideo: true,
+    duration: "0:11",
+    aspectRatio: "1080x1350 (4:5)",
+    videoUrl: "/VIDEO ADS/ice coffee short ad.mp4",
+    thumbnail: "/VIDEO ADS/thumbnails/ice coffee short ad.jpg",
+    images: [
+      "/VIDEO ADS/ice coffee short ad.mp4",
+      "/VIDEO ADS/thumbnails/ice coffee short ad.jpg"
+    ],
+    shortDesc: "Engaging interactive incoming call smartphone UI motion ad featuring animated iced coffee illustration, sound design, and swipe-to-answer interaction.",
+    fullDesc: "This short-form video ad reimagines food and beverage promotion using familiar mobile UI mechanics: an incoming call from 'Iced Coffee'. Features animated motion effects, ice cube sounds, vibrant coffee illustration, and a compelling 'slide to answer' CTA hook optimized for high retention on Instagram Reels and TikTok.",
+    highlights: [
+      "Vertical 4:5 portrait motion format (1080x1350) tailored for feed ads",
+      "Creative smartphone call screen interaction hook for instant thumb-stopping engagement",
+      "Custom typography and synchronized sound effects"
+    ]
+  },
+  {
+    id: "strawberry-milk-motion-ad",
+    title: "Time to Sip Strawberry Milk — Incoming Call Motion Ad",
+    category: "video-ads",
+    categoryLabel: "Motion Video Ad",
+    client: "Sweet Sip Beverage Co.",
+    year: "2026",
+    role: "Motion Designer & Visual Artist",
+    tools: ["Canva Pro", "Motion Graphics", "Sound Design", "Figma"],
+    featured: false,
+    isNew: true,
+    isVideo: true,
+    duration: "0:11",
+    aspectRatio: "1080x1350 (4:5)",
+    videoUrl: "/VIDEO ADS/strawberry milk short ad.mp4",
+    thumbnail: "/VIDEO ADS/thumbnails/strawberry milk short ad.jpg",
+    images: [
+      "/VIDEO ADS/strawberry milk short ad.mp4",
+      "/VIDEO ADS/thumbnails/strawberry milk short ad.jpg"
+    ],
+    shortDesc: "Charming pastel-themed incoming call video ad promoting artisanal strawberry milk with playful bubble animations and swipe UI.",
+    fullDesc: "Crafted for social media video marketing, this creative reel simulates an incoming call from refreshing strawberry milk. Featuring animated bubbling effects, custom script lettering, and a pastel color palette, it targets Gen Z beverage enthusiasts on Instagram Reels and TikTok.",
+    highlights: [
+      "Vibrant pastel aesthetic with fluid bubbling motion effects",
+      "High-engagement interactive incoming call mobile concept",
+      "1080x1350 vertical video format with crisp typography"
+    ]
+  },
+  {
+    id: "quiet-luxury-outfit-motion",
+    title: "Quiet Luxury Autumn Street Lookbook — Fashion Motion Poster",
+    category: "video-ads",
+    categoryLabel: "Fashion Video Ad",
+    client: "Maison Neutrals Autumn Collection",
+    year: "2026",
+    role: "Art Director & Motion Designer",
+    tools: ["Canva Pro", "Video Editing", "Editorial Layout", "Figma"],
+    featured: false,
+    isNew: true,
+    isVideo: true,
+    duration: "0:05",
+    aspectRatio: "1080x1350 (4:5)",
+    videoUrl: "/VIDEO ADS/Quiet luxury outfit poster.mp4",
+    thumbnail: "/VIDEO ADS/thumbnails/Quiet luxury outfit poster.jpg",
+    images: [
+      "/VIDEO ADS/Quiet luxury outfit poster.mp4",
+      "/VIDEO ADS/thumbnails/Quiet luxury outfit poster.jpg"
+    ],
+    shortDesc: "Editorial quiet luxury street fashion animated poster showcasing monochromatic styling, product breakdown framing, and smooth transitions.",
+    fullDesc: "Designed for high-end fashion branding, this video poster captures European street fashion elegance. It features animated product focus frames highlighting tailored beige trousers, cream knitwear, leather tote, and loafers, tied together with stately serif typography.",
+    highlights: [
+      "Sophisticated editorial framing with four-corner product breakdowns",
+      "Smooth kinetic text transitions with high-fashion serif type hierarchy",
+      "Optimized for luxury brand Instagram Reels and digital storefront displays"
+    ]
+  },
+  {
+    id: "ootd-street-style-motion",
+    title: "Outfit of the Day (OOTD) — Street Style Motion Poster",
+    category: "video-ads",
+    categoryLabel: "Fashion Video Ad",
+    client: "Moda Collective Apparel",
+    year: "2026",
+    role: "Art Director & Motion Designer",
+    tools: ["Canva Pro", "Video Editing", "Figma", "Editorial Layout"],
+    featured: false,
+    isNew: true,
+    isVideo: true,
+    duration: "0:05",
+    aspectRatio: "1080x1350 (4:5)",
+    videoUrl: "/VIDEO ADS/Outfit of the Day poster.mp4",
+    thumbnail: "/VIDEO ADS/thumbnails/Outfit of the Day poster.jpg",
+    images: [
+      "/VIDEO ADS/Outfit of the Day poster.mp4",
+      "/VIDEO ADS/thumbnails/Outfit of the Day poster.jpg"
+    ],
+    shortDesc: "Trendy urban street style OOTD animated lookbook poster spotlighting casual contemporary wardrobe essentials with animated callouts.",
+    fullDesc: "Combining contemporary street culture with magazine editorial layout, this motion ad presents an Outfit of the Day ensemble. Animated frames isolate individual pieces (sunglasses, dark tee, wide-leg denim, and sneakers) for instant consumer inspiration and shop-the-look appeal.",
+    highlights: [
+      "Dynamic product breakdown cards with synchronized animation",
+      "High-contrast editorial typography and street aesthetic",
+      "1080x1350 vertical format built for lifestyle fashion campaigns"
+    ]
+  },
+  {
+    id: "cafe-dessert-sweet-tooth",
+    title: "Got a Sweet Tooth? Treat Yourself — Cupcake Motion Poster",
+    category: "video-ads",
+    categoryLabel: "Cafe Motion Ad",
+    client: "Velvet Crumb Bakery & Patisserie",
+    year: "2026",
+    role: "Motion Designer & Graphic Artist",
+    tools: ["Canva Pro", "Motion Design", "Typography", "Figma"],
+    featured: false,
+    isNew: true,
+    isVideo: true,
+    duration: "0:13",
+    aspectRatio: "1080x1350 (4:5)",
+    videoUrl: "/VIDEO ADS/Cafe dessert poster.mp4",
+    thumbnail: "/VIDEO ADS/thumbnails/Cafe dessert poster.jpg",
+    images: [
+      "/VIDEO ADS/Cafe dessert poster.mp4",
+      "/VIDEO ADS/thumbnails/Cafe dessert poster.jpg"
+    ],
+    shortDesc: "Vibrant retro-inspired confectionery motion ad featuring sunburst rays, appetizing cupcake close-ups, and playful animated typography.",
+    fullDesc: "Created for patisseries and cafe promotions, this animated poster uses warm mauve and cream sunburst graphics paired with luscious dessert imagery. It engages dessert lovers with rhythmic text animations and a clear promotional message.",
+    highlights: [
+      "Eye-catching radial sunburst animation with layered dessert imagery",
+      "Playful script and serif typography hierarchy with drop shadows",
+      "Complete 12-second promo reel with soothing cafe background audio"
+    ]
+  },
+  {
+    id: "vertical-cafe-dessert-parfait",
+    title: "Cool Treats, Keep It Cool — Berry Parfait Motion Poster",
+    category: "video-ads",
+    categoryLabel: "Cafe Motion Ad",
+    client: "Artisan Delights Dessert Bar",
+    year: "2026",
+    role: "Motion Designer & Graphic Artist",
+    tools: ["Canva Pro", "Motion Design", "Typography", "Figma"],
+    featured: false,
+    isNew: true,
+    isVideo: true,
+    duration: "0:13",
+    aspectRatio: "1080x1350 (4:5)",
+    videoUrl: "/VIDEO ADS/Vertical cafe dessert poster.mp4",
+    thumbnail: "/VIDEO ADS/thumbnails/Vertical cafe dessert poster.jpg",
+    images: [
+      "/VIDEO ADS/Vertical cafe dessert poster.mp4",
+      "/VIDEO ADS/thumbnails/Vertical cafe dessert poster.jpg"
+    ],
+    shortDesc: "Sage green geometric split-screen animated poster showcasing a multi-layered yogurt parfait, gelato textures, and cool summer treats.",
+    fullDesc: "This motion graphic highlights cold cafe desserts through dynamic diagonal split panels, layered textural swatches of fruit gelato, and an artisanal berry yogurt parfait centerpiece. Timed to energetic cafe audio to evoke summer indulgence.",
+    highlights: [
+      "Geometric diagonal split-screen layout with parallax movement",
+      "Artisanal food styling and fresh organic color palette (sage green & berry)",
+      "Includes synchronized audio track for immersive social viewing"
+    ]
+  },
+  {
+    id: "coffee-shop-todays-order",
+    title: "Today's Order: Have a Good Coffee — Cafe Motion Ad",
+    category: "video-ads",
+    categoryLabel: "Coffeehouse Video Ad",
+    client: "Roasters Republic Coffeehouse",
+    year: "2026",
+    role: "Motion Designer & Graphic Artist",
+    tools: ["Canva Pro", "Motion Graphics", "Typography", "Figma"],
+    featured: false,
+    isNew: true,
+    isVideo: true,
+    duration: "0:19",
+    aspectRatio: "1080x1350 (4:5)",
+    videoUrl: "/VIDEO ADS/Coffee shop poster (1).mp4",
+    thumbnail: "/VIDEO ADS/thumbnails/Coffee shop poster (1).jpg",
+    images: [
+      "/VIDEO ADS/Coffee shop poster (1).mp4",
+      "/VIDEO ADS/thumbnails/Coffee shop poster (1).jpg"
+    ],
+    shortDesc: "Rich espresso brown coffeehouse motion graphic poster featuring golden crema textures, takeaway cups, and warm cafe ambiance.",
+    fullDesc: "Targeted at daily coffee enthusiasts, this extended motion ad combines rich espresso color theory with steaming cup visuals and foam texture backgrounds. Designed to drive morning traffic and digital brand awareness for boutique cafes.",
+    highlights: [
+      "Extended 18-second narrative ad with authentic pouring sounds & background music",
+      "Cohesive warm coffee palette: Mocha, Crema Cream, and Bronze",
+      "Multi-asset animation including espresso cups, iced drinks, and takeaway cups"
+    ]
+  },
+  {
+    id: "typographic-pizza-slice",
+    title: "Life's Better With a Slice — Artisanal Pizza Motion Ad",
+    category: "video-ads",
+    categoryLabel: "Food Motion Ad",
+    client: "Bella Crust Artisan Pizzeria",
+    year: "2026",
+    role: "Kinetic Typographer & Visual Artist",
+    tools: ["Canva Pro", "Kinetic Typography", "Motion Graphics"],
+    featured: false,
+    isNew: true,
+    isVideo: true,
+    duration: "0:06",
+    aspectRatio: "1080x1350 (4:5)",
+    videoUrl: "/VIDEO ADS/Typographic pizza poster (1).mp4",
+    thumbnail: "/VIDEO ADS/thumbnails/Typographic pizza poster (1).jpg",
+    images: [
+      "/VIDEO ADS/Typographic pizza poster (1).mp4",
+      "/VIDEO ADS/thumbnails/Typographic pizza poster (1).jpg"
+    ],
+    shortDesc: "Punchy kinetic typography motion poster featuring floating ripe vine tomatoes, fresh basil, and an oven-baked pizza slice cut-out.",
+    fullDesc: "A high-impact kinetic typography poster created for Italian eateries and artisanal pizzerias. Bold oversized letterforms interact directly with food cutouts and floating organic ingredients for an appetite-stimulating social ad.",
+    highlights: [
+      "Expressive kinetic typography interacting seamlessly with food elements",
+      "Energetic curved letter layouts and floating ingredient animations",
+      "Quick 6-second high-retention loop designed for Instagram Stories"
+    ]
+  },
+  {
+    id: "typographic-donut-treat",
+    title: "It's Okay to Have a Treat — Chocolate Donut Motion Ad",
+    category: "video-ads",
+    categoryLabel: "Food Motion Ad",
+    client: "Sugar & Bloom Confections",
+    year: "2026",
+    role: "Kinetic Typographer & Visual Artist",
+    tools: ["Canva Pro", "Kinetic Typography", "Motion Graphics"],
+    featured: false,
+    isNew: true,
+    isVideo: true,
+    duration: "0:06",
+    aspectRatio: "1080x1350 (4:5)",
+    videoUrl: "/VIDEO ADS/Have a treat typographic poster (1).mp4",
+    thumbnail: "/VIDEO ADS/thumbnails/Have a treat typographic poster (1).jpg",
+    images: [
+      "/VIDEO ADS/Have a treat typographic poster (1).mp4",
+      "/VIDEO ADS/thumbnails/Have a treat typographic poster (1).jpg"
+    ],
+    shortDesc: "Playful pastel pink motion ad pairing bold condensed kinetic typography with a mouth-watering chocolate sprinkle donut and flying sprinkles.",
+    fullDesc: "Designed to evoke instant craving and positive vibes, this kinetic typography video combines bold compressed lettering with a chocolate frosted donut taking the center stage. Scattered sprinkles drift across the pastel pink backdrop.",
+    highlights: [
+      "Bold typographic scale contrast (condensed uppercase vs cursive script)",
+      "Floating sprinkle particle motion for whimsical visual interest",
+      "Vibrant candy pink and rich chocolate brown color harmony"
+    ]
+  },
+  {
+    id: "typographic-skincare-moment",
+    title: "It's Okay to Take a Moment — Skincare & Wellness Motion Ad",
+    category: "video-ads",
+    categoryLabel: "Beauty & Wellness Motion Ad",
+    client: "Lumière Skin Co. Wellness Line",
+    year: "2026",
+    role: "Kinetic Typographer & Visual Artist",
+    tools: ["Canva Pro", "Kinetic Typography", "Motion Graphics"],
+    featured: false,
+    isNew: true,
+    isVideo: true,
+    duration: "0:06",
+    aspectRatio: "1080x1350 (4:5)",
+    videoUrl: "/VIDEO ADS/Take a moment typographic poster (2).mp4",
+    thumbnail: "/VIDEO ADS/thumbnails/Take a moment typographic poster (2).jpg",
+    images: [
+      "/VIDEO ADS/Take a moment typographic poster (2).mp4",
+      "/VIDEO ADS/thumbnails/Take a moment typographic poster (2).jpg"
+    ],
+    shortDesc: "Serene self-care typography poster featuring floating rose petals, smooth cosmetic cream textures, and gentle kinetic movement.",
+    fullDesc: "Promoting mindfulness and skin wellness, this kinetic typography poster features floating soft pink petals and cosmetic cream swirls orbiting a luxury skincare jar. Crafted with soft blush hues and minimal editorial typography.",
+    highlights: [
+      "Calming botanical motion with floating watercolor rose petals",
+      "Curved typographic baseline accentuating the skincare jar product placement",
+      "Gentle pacing and luxurious wellness aesthetics"
+    ]
+  },
+  {
+    id: "typographic-matcha-pause",
+    title: "It's Okay to Take a Pause — Matcha Latte Motion Ad",
+    category: "video-ads",
+    categoryLabel: "Food & Beverage Motion Ad",
+    client: "Matcha Mondays Motion Campaign",
+    year: "2026",
+    role: "Kinetic Typographer & Visual Artist",
+    tools: ["Canva Pro", "Kinetic Typography", "Motion Graphics"],
+    featured: false,
+    isNew: true,
+    isVideo: true,
+    duration: "0:07",
+    aspectRatio: "1080x1350 (4:5)",
+    videoUrl: "/VIDEO ADS/Take a pause typographic poster.mp4",
+    thumbnail: "/VIDEO ADS/thumbnails/Take a pause typographic poster.jpg",
+    images: [
+      "/VIDEO ADS/Take a pause typographic poster.mp4",
+      "/VIDEO ADS/thumbnails/Take a pause typographic poster.jpg"
+    ],
+    shortDesc: "Soothing matcha green kinetic typography poster featuring delicate latte art foam animation and dusted ceremonial matcha particles.",
+    fullDesc: "Connecting directly with the Matcha Mondays brand identity, this motion poster uses earthy green tones and kinetic typography to communicate tranquility and mindfulness. The central ceramic cup features animated latte art surrounded by fine matcha dust.",
+    highlights: [
+      "Harmonious brand extension for the Matcha Mondays visual identity",
+      "Kinetic type animation synchronized with subtle matcha powder drift",
+      "Earthy green palette with clean Scandinavian visual balance"
     ]
   }
 ];

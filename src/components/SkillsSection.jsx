@@ -1,6 +1,6 @@
 import React from 'react';
 import { artistProfile } from '../data/portfolioData';
-import { Palette, Image, BookOpen, Layout, Sparkles, Target, Layers, Cpu, PenTool, CheckCircle2 } from 'lucide-react';
+import { Palette, Image, BookOpen, Layout, Sparkles, Target, Layers, Cpu, PenTool, CheckCircle2, Film } from 'lucide-react';
 
 export default function SkillsSection() {
   const disciplines = [
@@ -8,6 +8,11 @@ export default function SkillsSection() {
       title: "Brand Identity Systems",
       desc: "Logo design, icon marks, brand guidelines, color palette selection, typography systems, and mockups.",
       icon: Target
+    },
+    {
+      title: "Short-Form Video Ads & Motion",
+      desc: "Engaging 4:5 vertical video ads (1080x1350), kinetic typography, phone-call interaction concepts, and social reels.",
+      icon: Film
     },
     {
       title: "Social Media Kits & Ads",
@@ -28,11 +33,6 @@ export default function SkillsSection() {
       title: "Data Visualization & Charts",
       desc: "Transforming complex statistics, step-by-step workflows, and data into engaging infographics.",
       icon: Layers
-    },
-    {
-      title: "Vector Art & Asset Production",
-      desc: "Precision vector illustrations, icon sets, social assets, and professional image retouching.",
-      icon: PenTool
     }
   ];
 

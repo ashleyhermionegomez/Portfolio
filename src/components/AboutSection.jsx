@@ -1,6 +1,6 @@
 import React from 'react';
 import { artistProfile } from '../data/portfolioData';
-import { Compass, Lightbulb, RefreshCw, Send, CheckCircle2, GraduationCap, Sparkles, BookOpen, Layers, Award, ShieldCheck, FileText } from 'lucide-react';
+import { Compass, Lightbulb, RefreshCw, Send, CheckCircle2, GraduationCap, Sparkles, BookOpen, Layers, Award, ShieldCheck, FileText, Play } from 'lucide-react';
 
 export default function AboutSection({ onOpenContact, onOpenResume }) {
   const steps = [
@@ -82,7 +82,15 @@ export default function AboutSection({ onOpenContact, onOpenResume }) {
 
                     <div className="p-3 rounded-xl bg-slate-900/90 border border-slate-800/80 space-y-1">
                       <div className="font-semibold text-white flex items-center gap-1.5">
-                        <Layers className="w-3.5 h-3.5 text-cyan-400" />
+                        <Play className="w-3.5 h-3.5 text-cyan-400 fill-cyan-400" />
+                        <span>Motion & Video</span>
+                      </div>
+                      <p className="text-[11px] text-slate-400">Vertical Ads & Kinetic Reels</p>
+                    </div>
+
+                    <div className="p-3 rounded-xl bg-slate-900/90 border border-slate-800/80 space-y-1">
+                      <div className="font-semibold text-white flex items-center gap-1.5">
+                        <Layers className="w-3.5 h-3.5 text-indigo-400" />
                         <span>Social Systems</span>
                       </div>
                       <p className="text-[11px] text-slate-400">Carousels, Ads & Feed Kits</p>
@@ -94,14 +102,6 @@ export default function AboutSection({ onOpenContact, onOpenResume }) {
                         <span>Editorial Print</span>
                       </div>
                       <p className="text-[11px] text-slate-400">Brochures & Multi-page PDFs</p>
-                    </div>
-
-                    <div className="p-3 rounded-xl bg-slate-900/90 border border-slate-800/80 space-y-1">
-                      <div className="font-semibold text-white flex items-center gap-1.5">
-                        <Award className="w-3.5 h-3.5 text-indigo-400" />
-                        <span>Slide Decks</span>
-                      </div>
-                      <p className="text-[11px] text-slate-400">Executive Decks & Pitches</p>
                     </div>
                   </div>
                 </div>

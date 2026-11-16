@@ -4,6 +4,7 @@ import confetti from 'canvas-confetti';
 
 // Project type options
 const PROJECT_TYPES = [
+  { value: 'Short-Form Video Ads & Motion Design', label: 'Short-Form Video Ads & Motion Design' },
   { value: 'Brand Identity & Logo Concept', label: 'Brand Identity & Logo Concept' },
   { value: 'Social Media Campaign Graphics', label: 'Social Media Campaign Graphics' },
   { value: 'Presentation / Pitch Deck Layout', label: 'Presentation / Pitch Deck Layout' },

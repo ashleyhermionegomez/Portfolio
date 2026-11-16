@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { X, ChevronLeft, ChevronRight, Maximize2, Layers, Calendar, User, CheckCircle, ExternalLink, GraduationCap, Mail, Sparkles } from 'lucide-react';
+import { X, ChevronLeft, ChevronRight, Maximize2, Layers, Calendar, User, CheckCircle, ExternalLink, GraduationCap, Mail, Sparkles, Play, Film } from 'lucide-react';
 import { portfolioProjects } from '../data/portfolioData';
 
 export default function ProjectModal({ project, onClose, onSelectProject, onInquire }) {
@@ -31,6 +31,9 @@ export default function ProjectModal({ project, onClose, onSelectProject, onInqu
   const prevProject = portfolioProjects[(currentProjectIdx - 1 + portfolioProjects.length) % portfolioProjects.length];
   const nextProject = portfolioProjects[(currentProjectIdx + 1) % portfolioProjects.length];
 
+  const currentAsset = project.images[activeImageIdx] || project.thumbnail;
+  const isVideoAsset = currentAsset.endsWith('.mp4') || (project.isVideo && currentAsset === project.videoUrl);
+
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center p-2 sm:p-4 md:p-6 bg-slate-950/90 backdrop-blur-xl animate-fade-in overflow-y-auto">
       
@@ -46,19 +49,27 @@ export default function ProjectModal({ project, onClose, onSelectProject, onInqu
             <span className="px-2.5 py-1 rounded-md text-xs font-bold uppercase tracking-wider bg-blue-500/10 text-blue-400 border border-blue-500/20">
               {project.categoryLabel}
             </span>
+            {project.isVideo && (
+              <span className="px-2.5 py-1 rounded-md text-xs font-mono font-semibold bg-cyan-500/10 text-cyan-300 border border-cyan-500/20 flex items-center gap-1.5">
+                <Play className="w-3 h-3 fill-cyan-400" />
+                {project.duration || 'Motion Ad'}
+              </span>
+            )}
             <h2 className="font-heading font-bold text-lg sm:text-xl text-white truncate max-w-xs sm:max-w-md">
               {project.title}
             </h2>
           </div>
 
           <div className="flex items-center gap-2">
-            <button
-              onClick={() => setIsZoomed(!isZoomed)}
-              className="p-2 rounded-xl bg-slate-800/80 text-slate-300 hover:text-white hover:bg-slate-700 transition-all"
-              title="Toggle Full View"
-            >
-              <Maximize2 className="w-4 h-4" />
-            </button>
+            {!isVideoAsset && (
+              <button
+                onClick={() => setIsZoomed(!isZoomed)}
+                className="p-2 rounded-xl bg-slate-800/80 text-slate-300 hover:text-white hover:bg-slate-700 transition-all"
+                title="Toggle Full View"
+              >
+                <Maximize2 className="w-4 h-4" />
+              </button>
+            )}
             <button
               onClick={onClose}
               className="p-2 rounded-xl bg-slate-800/80 text-slate-300 hover:text-white hover:bg-slate-700 transition-all"
@@ -75,16 +86,31 @@ export default function ProjectModal({ project, onClose, onSelectProject, onInqu
           {/* Left / Top Column: Gallery Lightbox Viewer */}
           <div className="lg:col-span-7 bg-[#07090e] p-4 sm:p-6 flex flex-col justify-between space-y-4">
             
-            {/* Main Stage Image */}
+            {/* Main Stage Image / Video */}
             <div className="relative flex-1 min-h-[300px] sm:min-h-[420px] flex items-center justify-center rounded-2xl overflow-hidden bg-slate-950 border border-slate-800/80">
-              <img
-                src={project.images[activeImageIdx]}
-                alt={`${project.title} asset ${activeImageIdx + 1}`}
-                className={`max-h-[60vh] w-auto max-w-full object-contain transition-all duration-300 ${
-                  isZoomed ? 'scale-125 cursor-zoom-out' : 'cursor-zoom-in'
-                }`}
-                onClick={() => setIsZoomed(!isZoomed)}
-              />
+              {isVideoAsset ? (
+                <div className="w-full h-full flex flex-col items-center justify-center p-2">
+                  <video
+                    key={currentAsset}
+                    src={currentAsset}
+                    poster={project.thumbnail}
+                    controls
+                    autoPlay
+                    loop
+                    playsInline
+                    className="max-h-[60vh] w-auto max-w-full rounded-xl object-contain shadow-2xl bg-black"
+                  />
+                </div>
+              ) : (
+                <img
+                  src={currentAsset}
+                  alt={`${project.title} asset ${activeImageIdx + 1}`}
+                  className={`max-h-[60vh] w-auto max-w-full object-contain transition-all duration-300 ${
+                    isZoomed ? 'scale-125 cursor-zoom-out' : 'cursor-zoom-in'
+                  }`}
+                  onClick={() => setIsZoomed(!isZoomed)}
+                />
+              )}
 
               {/* Prev / Next Image Overlay Buttons */}
               {project.images.length > 1 && (
@@ -108,27 +134,46 @@ export default function ProjectModal({ project, onClose, onSelectProject, onInqu
 
               {/* Slide Counter Badge */}
               <div className="absolute bottom-3 right-3 px-3 py-1 rounded-lg bg-slate-950/85 text-xs font-mono text-slate-300 border border-slate-800 backdrop-blur-md flex items-center gap-1.5">
-                <Layers className="w-3.5 h-3.5 text-blue-400" />
-                <span>{activeImageIdx + 1} / {project.images.length}</span>
+                {isVideoAsset ? (
+                  <>
+                    <Film className="w-3.5 h-3.5 text-cyan-400" />
+                    <span>Video Ad ({project.duration || 'Motion'})</span>
+                  </>
+                ) : (
+                  <>
+                    <Layers className="w-3.5 h-3.5 text-blue-400" />
+                    <span>{activeImageIdx + 1} / {project.images.length}</span>
+                  </>
+                )}
               </div>
             </div>
 
             {/* Thumbnail Strip */}
             {project.images.length > 1 && (
               <div className="flex items-center gap-2 overflow-x-auto pb-1 pt-2 scrollbar-thin">
-                {project.images.map((imgUrl, idx) => (
-                  <button
-                    key={idx}
-                    onClick={() => setActiveImageIdx(idx)}
-                    className={`relative w-16 h-16 sm:w-20 sm:h-20 rounded-xl overflow-hidden shrink-0 border-2 transition-all ${
-                      idx === activeImageIdx
-                        ? 'border-blue-400 shadow-md shadow-blue-500/25 scale-105'
-                        : 'border-slate-800 opacity-60 hover:opacity-100'
-                    }`}
-                  >
-                    <img src={imgUrl} alt="thumbnail" className="w-full h-full object-cover" />
-                  </button>
-                ))}
+                {project.images.map((imgUrl, idx) => {
+                  const isThumbVideo = imgUrl.endsWith('.mp4');
+                  const displayThumb = isThumbVideo ? project.thumbnail : imgUrl;
+
+                  return (
+                    <button
+                      key={idx}
+                      onClick={() => setActiveImageIdx(idx)}
+                      className={`relative w-16 h-16 sm:w-20 sm:h-20 rounded-xl overflow-hidden shrink-0 border-2 transition-all ${
+                        idx === activeImageIdx
+                          ? 'border-blue-400 shadow-md shadow-blue-500/25 scale-105'
+                          : 'border-slate-800 opacity-60 hover:opacity-100'
+                      }`}
+                    >
+                      <img src={displayThumb} alt="thumbnail" className="w-full h-full object-cover" />
+                      {isThumbVideo && (
+                        <div className="absolute inset-0 bg-slate-950/50 flex items-center justify-center">
+                          <Play className="w-4 h-4 fill-cyan-400 text-cyan-400" />
+                        </div>
+                      )}
+                    </button>
+                  );
+                })}
               </div>
             )}
           </div>
@@ -148,11 +193,25 @@ export default function ProjectModal({ project, onClose, onSelectProject, onInqu
 
                 <div className="p-3 rounded-xl bg-slate-900/90 border border-slate-800 space-y-1">
                   <span className="text-slate-400 font-mono flex items-center gap-1">
-                    <Calendar className="w-3 h-3 text-blue-400" /> Year & Role
+                    {project.isVideo ? <Play className="w-3 h-3 text-cyan-400" /> : <Calendar className="w-3 h-3 text-blue-400" />}
+                    {project.isVideo ? 'Format & Length' : 'Year & Role'}
                   </span>
-                  <p className="font-semibold text-white truncate">{project.year} • {project.role.split(' ')[0]}</p>
+                  <p className="font-semibold text-white truncate">
+                    {project.isVideo ? `${project.aspectRatio || '1080x1350'} • ${project.duration}` : `${project.year} • ${project.role.split(' ')[0]}`}
+                  </p>
                 </div>
               </div>
+
+              {/* Video Banner Attribution */}
+              {project.isVideo && (
+                <div className="flex items-start gap-3 px-4 py-3 rounded-xl bg-cyan-500/10 border border-cyan-500/30">
+                  <Film className="w-4 h-4 text-cyan-400 shrink-0 mt-0.5" />
+                  <div className="text-xs leading-relaxed">
+                    <span className="font-bold text-cyan-300">Short-Form Motion Video Ad</span>
+                    <span className="text-cyan-400/90"> — 1080x1350 vertical video format designed for Instagram Reels, TikTok, and social feed ads with custom typography and motion pacing.</span>
+                  </div>
+                </div>
+              )}
 
               {/* Internship Attribution Banner */}
               {project.internship && (
