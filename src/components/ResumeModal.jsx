@@ -137,7 +137,7 @@ export default function ResumeModal({ isOpen, onClose }) {
                 </div>
                 <p className="text-xs text-blue-300 font-mono">Independent Creative Practice</p>
                 <p className="text-xs text-slate-300 font-light leading-relaxed pt-1">
-                  • Curated an expansive 68-project portfolio covering brand identity packages (Matcha Mondays, Vantora), motion video ads, luxury campaign art, and multi-slide social systems.<br />
+                  • Curated an expansive 69-project portfolio covering brand identity packages (Matcha Mondays, Vantora), motion video ads, luxury campaign art, and multi-slide social systems.<br />
                   • Proficient in modern design tools including Figma, Canva Pro, layout design, typography systems, and digital asset preparation through dedicated self-directed practice.
                 </p>
               </div>

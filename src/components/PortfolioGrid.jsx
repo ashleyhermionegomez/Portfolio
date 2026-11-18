@@ -96,7 +96,7 @@ export default function PortfolioGrid({ onSelectProject }) {
   const tabs = [
     { id: 'featured',     label: '⭐ Recruiter Fast-Track', count: featuredProjectIds.length, hint: 'Top Flagship Case Studies' },
     { id: 'all',          label: 'All Projects',           count: portfolioProjects.length, hint: `Complete ${portfolioProjects.length} Works` },
-    { id: 'video-ads',    label: '🎬 Video & Motion Ads',  count: portfolioProjects.filter(p => p.category === 'video-ads' || p.isVideo).length, hint: '11 High-Impact Motion Ads & Video Posters' },
+    { id: 'video-ads',    label: '🎬 Video & Motion Ads',  count: portfolioProjects.filter(p => p.category === 'video-ads' || p.isVideo).length, hint: `${portfolioProjects.filter(p => p.category === 'video-ads' || p.isVideo).length} High-Impact Motion Ads & Video Posters` },
     { id: 'internship',   label: '💼 Real Internship & Campus', count: portfolioProjects.filter(p => p.internship || p.category === 'pup-taguig' || p.category === 'corporate-food').length, hint: 'PUP Taguig, ITECH & Orlando Prestige' },
     { id: 'branding',     label: 'Brand Identity',         count: portfolioProjects.filter(p => p.category === 'branding').length, hint: 'Logos & Brand Guidelines' },
     { id: 'social',       label: 'Social Media & Ads',     count: portfolioProjects.filter(p => p.category === 'social').length, hint: 'Carousels, Campaigns & Posts' },

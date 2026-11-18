@@ -5,8 +5,8 @@ export const artistProfile = {
   location: "Open for Remote & On-Site Junior Roles",
   status: "Available for Full-Time Junior Roles & Freelance Design",
   stats: [
-    { label: "Curated Showcase", value: "68 Works" },
-    { label: "Motion & Video Ads", value: "11 Reels" },
+    { label: "Curated Showcase", value: "69 Works" },
+    { label: "Motion & Video Ads", value: "12 Reels" },
     { label: "Campus & Client Projects", value: "12 Assets" },
     { label: "Education Status", value: "Fresh Graduate (IT)" }
   ],
@@ -1618,6 +1618,34 @@ export const portfolioProjects = [
       "Eye-catching radial sunburst animation with layered dessert imagery",
       "Playful script and serif typography hierarchy with drop shadows",
       "Complete 12-second promo reel with soothing cafe background audio"
+    ]
+  },
+  {
+    id: "cafe-dessert-todays-treat",
+    title: "Today's Treat: Something Sweet — Artisanal Dessert Showcase Motion Poster",
+    category: "video-ads",
+    categoryLabel: "Cafe Motion Ad",
+    client: "Velvet Crumb Bakery & Patisserie",
+    year: "2026",
+    role: "Motion Designer & Graphic Artist",
+    tools: ["Canva Pro", "Motion Design", "Typography", "Food Styling"],
+    featured: false,
+    isNew: true,
+    isVideo: true,
+    duration: "0:12",
+    aspectRatio: "1080x1350 (4:5)",
+    videoUrl: "/VIDEO ADS/Cafe dessert p2.mp4",
+    thumbnail: "/VIDEO ADS/thumbnails/Cafe dessert p2.jpg",
+    images: [
+      "/VIDEO ADS/Cafe dessert p2.mp4",
+      "/VIDEO ADS/thumbnails/Cafe dessert p2.jpg"
+    ],
+    shortDesc: "Delectable retro-styled confectionery motion ad showcasing a rotating runway of artisanal desserts including strawberry cheesecake, chocolate fudge cake, and choux pastries.",
+    fullDesc: "Created as part of the Velvet Crumb cafe dessert motion campaign, this animated 4:5 vertical ad spotlights handcrafted pastries along an elegant winding dessert runway. The animation dynamically brings signature confections—glazed strawberry cheesecake, rich chocolate fudge cake, cream puff, and raspberry macaron—into sharp focus against a warm mauve starburst backdrop with vintage editorial typography reading 'Today's treat: SOMETHING SWEET'.",
+    highlights: [
+      "Dynamic curved dessert runway animation cycling through signature bakery treats",
+      "Warm retro confectionery aesthetic: Mauve, Cream, and Strawberry Rose harmony",
+      "4:5 vertical portrait format (1080x1350) tailored for Instagram feed and Reels engagement"
     ]
   },
   {
