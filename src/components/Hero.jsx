@@ -93,10 +93,10 @@ export default function Hero({ onOpenContact, onOpenResume, scrollToPortfolio, o
               </div>
               <div className="space-y-1">
                 <div className="text-2xl font-extrabold text-amber-400 font-heading">
-                  11 Real Assets
+                  {portfolioProjects.filter(p => p.internship).length} Deliverables
                 </div>
                 <div className="text-[11px] text-amber-400/80 uppercase tracking-wider font-mono">
-                  Internship Deliverables
+                  Campus & Client Works
                 </div>
               </div>
               <div className="space-y-1">

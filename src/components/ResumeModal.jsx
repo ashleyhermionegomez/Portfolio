@@ -100,6 +100,20 @@ export default function ResumeModal({ isOpen, onClose }) {
 
             <div className="space-y-6 border-l-2 border-slate-800 pl-4">
               
+              {/* Lead Graphic Designer - Event Branding */}
+              <div className="space-y-1.5 relative">
+                <span className="absolute -left-[21px] top-1.5 w-2.5 h-2.5 rounded-full bg-cyan-400" />
+                <div className="flex justify-between items-baseline">
+                  <h4 className="font-bold text-white text-base">Lead Graphic Designer — Event Branding & Pubmat</h4>
+                  <span className="text-xs font-mono text-cyan-400 font-semibold">2026</span>
+                </div>
+                <p className="text-xs text-blue-300 font-mono">PUP Taguig Campus & ITECH ("AI Can Code: Can You Compete?")</p>
+                <p className="text-xs text-slate-300 font-light leading-relaxed pt-1">
+                  • Led complete visual identity and 33-asset publication materials (pubmat) campaign for the "AI Can Code: Can You Compete?" symposium.<br />
+                  • Directed cyberpunk neon aesthetic, 3D mascot styling, and strict 60-30-10 color hierarchy across posters, countdown teasers, speaker cards, and live event frames.
+                </p>
+              </div>
+
               {/* Internship Experience */}
               <div className="space-y-1.5 relative">
                 <span className="absolute -left-[21px] top-1.5 w-2.5 h-2.5 rounded-full bg-amber-400" />
@@ -123,7 +137,7 @@ export default function ResumeModal({ isOpen, onClose }) {
                 </div>
                 <p className="text-xs text-blue-300 font-mono">Independent Creative Practice</p>
                 <p className="text-xs text-slate-300 font-light leading-relaxed pt-1">
-                  • Curated a comprehensive 56-project portfolio covering brand identity packages (Matcha Mondays, Vantora), luxury campaign art (Lumière Botanica), and 10-slide educational carousels (AI Agents in Finance).<br />
+                  • Curated an expansive 68-project portfolio covering brand identity packages (Matcha Mondays, Vantora), motion video ads, luxury campaign art, and multi-slide social systems.<br />
                   • Proficient in modern design tools including Figma, Canva Pro, layout design, typography systems, and digital asset preparation through dedicated self-directed practice.
                 </p>
               </div>

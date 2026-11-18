@@ -26,7 +26,9 @@ export default function PortfolioGrid({ onSelectProject }) {
     } else if (activeTab === 'video-ads') {
       list = list.filter(p => p.category === 'video-ads' || p.isVideo);
     } else if (activeTab === 'internship') {
-      list = list.filter(p => p.internship);
+      list = list.filter(p => p.internship || p.category === 'pup-taguig' || p.category === 'corporate-food');
+    } else if (activeTab === 'social') {
+      list = list.filter(p => p.category === 'social' || p.id === 'ai-can-code-pubmat');
     } else if (activeTab === 'all') {
       // Keep all
     } else {
@@ -43,7 +45,8 @@ export default function PortfolioGrid({ onSelectProject }) {
         p.categoryLabel.toLowerCase().includes(q) ||
         p.tools.some(t => t.toLowerCase().includes(q)) ||
         (p.internshipCompany && p.internshipCompany.toLowerCase().includes(q)) ||
-        (p.isVideo && (q.includes('video') || q.includes('motion') || q.includes('ad') || q.includes('reel')))
+        (p.isVideo && (q.includes('video') || q.includes('motion') || q.includes('ad') || q.includes('reel'))) ||
+        (p.id === 'ai-can-code-pubmat' && (q.includes('pubmat') || q.includes('ai can code') || q.includes('seminar') || q.includes('itech') || q.includes('robot')))
       );
     }
 
@@ -94,7 +97,7 @@ export default function PortfolioGrid({ onSelectProject }) {
     { id: 'featured',     label: '⭐ Recruiter Fast-Track', count: featuredProjectIds.length, hint: 'Top Flagship Case Studies' },
     { id: 'all',          label: 'All Projects',           count: portfolioProjects.length, hint: `Complete ${portfolioProjects.length} Works` },
     { id: 'video-ads',    label: '🎬 Video & Motion Ads',  count: portfolioProjects.filter(p => p.category === 'video-ads' || p.isVideo).length, hint: '11 High-Impact Motion Ads & Video Posters' },
-    { id: 'internship',   label: '💼 Real Internship',      count: portfolioProjects.filter(p => p.internship).length, hint: 'Orlando Prestige & PUP Taguig' },
+    { id: 'internship',   label: '💼 Real Internship & Campus', count: portfolioProjects.filter(p => p.internship || p.category === 'pup-taguig' || p.category === 'corporate-food').length, hint: 'PUP Taguig, ITECH & Orlando Prestige' },
     { id: 'branding',     label: 'Brand Identity',         count: portfolioProjects.filter(p => p.category === 'branding').length, hint: 'Logos & Brand Guidelines' },
     { id: 'social',       label: 'Social Media & Ads',     count: portfolioProjects.filter(p => p.category === 'social').length, hint: 'Carousels, Campaigns & Posts' },
     { id: 'presentation', label: 'Presentations & Decks',  count: portfolioProjects.filter(p => p.category === 'presentation').length, hint: 'Pitch Decks & Roadmaps' },

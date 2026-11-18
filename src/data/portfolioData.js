@@ -5,9 +5,9 @@ export const artistProfile = {
   location: "Open for Remote & On-Site Junior Roles",
   status: "Available for Full-Time Junior Roles & Freelance Design",
   stats: [
-    { label: "Curated Showcase", value: "67 Works" },
+    { label: "Curated Showcase", value: "68 Works" },
     { label: "Motion & Video Ads", value: "11 Reels" },
-    { label: "Real Internship Projects", value: "11 Assets" },
+    { label: "Campus & Client Projects", value: "12 Assets" },
     { label: "Education Status", value: "Fresh Graduate (IT)" }
   ],
   skills: [
@@ -40,6 +40,7 @@ export const artistProfile = {
 };
 
 export const featuredProjectIds = [
+  "ai-can-code-pubmat",
   "ice-coffee-motion-ad",
   "matcha-mondays",
   "vantora-identity",
@@ -1103,6 +1104,66 @@ export const portfolioProjects = [
       "Process flow visualization design",
       "Icon-driven step-by-step layout",
       "Clean, print-ready infographic format"
+    ]
+  },
+  {
+    id: "ai-can-code-pubmat",
+    title: '"AI Can Code: Can You Compete?" Seminar Pubmat & Event Branding',
+    category: "pup-taguig",
+    categoryLabel: "Event Branding & Pubmat",
+    client: "PUP Taguig Campus & ITECH",
+    year: "2026",
+    role: "Lead Graphic Designer",
+    tools: ["Canva Pro", "Event Branding", "Graphic Design"],
+    featured: true,
+    isNew: true,
+    internship: true,
+    internshipCompany: "PUP Taguig Campus & ITECH",
+    thumbnail: "/Portfolio/PUBMAT/Main Poster.png",
+    images: [
+      "/Portfolio/PUBMAT/Main Poster.png",
+      "/Portfolio/PUBMAT/Registration Post.png",
+      "/Portfolio/PUBMAT/fb cover photo.png",
+      "/Portfolio/PUBMAT/4.png",
+      "/Portfolio/PUBMAT/5.png",
+      "/Portfolio/PUBMAT/6.png",
+      "/Portfolio/PUBMAT/7.png",
+      "/Portfolio/PUBMAT/8.png",
+      "/Portfolio/PUBMAT/9.png",
+      "/Portfolio/PUBMAT/10.png",
+      "/Portfolio/PUBMAT/11.png",
+      "/Portfolio/PUBMAT/12.png",
+      "/Portfolio/PUBMAT/13.png",
+      "/Portfolio/PUBMAT/14.png",
+      "/Portfolio/PUBMAT/15.png",
+      "/Portfolio/PUBMAT/16.png",
+      "/Portfolio/PUBMAT/17.png",
+      "/Portfolio/PUBMAT/18.png",
+      "/Portfolio/PUBMAT/19.png",
+      "/Portfolio/PUBMAT/20.png",
+      "/Portfolio/PUBMAT/21.png",
+      "/Portfolio/PUBMAT/22.png",
+      "/Portfolio/PUBMAT/23.png",
+      "/Portfolio/PUBMAT/24.png",
+      "/Portfolio/PUBMAT/25.png",
+      "/Portfolio/PUBMAT/26.png",
+      "/Portfolio/PUBMAT/27.png",
+      "/Portfolio/PUBMAT/28.png",
+      "/Portfolio/PUBMAT/29.png",
+      "/Portfolio/PUBMAT/30.png",
+      "/Portfolio/PUBMAT/31.png",
+      "/Portfolio/PUBMAT/32.png",
+      "/Portfolio/PUBMAT/33.png"
+    ],
+    shortDesc: "Complete 33-piece futuristic cyberpunk visual identity and publication materials campaign for the 'AI Can Code: Can You Compete?' seminar at PUP Taguig & ITECH.",
+    fullDesc: "The \"AI Can Code: Can You Compete?\" seminar required a cohesive, futuristic visual identity to match its theme of future-proofing IT students. The design strategy utilized a striking neon purple and blue cyberpunk aesthetic featuring 3D robot mascots to capture the AI-driven focus. By applying a strict 60-30-10 color rule to balance the vibrant neon accents against the deep space backgrounds, the campaign maintained strong brand consistency and readability across a wide variety of informational formats.",
+    highlights: [
+      "Main event poster and registration guidelines",
+      "Program flow and schedule graphics",
+      "D-Day countdown teaser series",
+      "Speaker and host profile cards",
+      "\"Happening Now\" live event photo frames and venue change announcements",
+      "Comprehensive 33-asset campaign built with strict 60-30-10 color discipline"
     ]
   },
   {
